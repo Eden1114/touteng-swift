@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */; };
+		F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF2262D9AEA00F4E674 /* ContentView.swift */; };
+		F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2377DF4262D9AEB00F4E674 /* Assets.xcassets */; };
+		F2377DF8262D9AEB00F4E674 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2377DF7262D9AEB00F4E674 /* Preview Assets.xcassets */; };
+		F2377DFA262D9AEB00F4E674 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF9262D9AEB00F4E674 /* Persistence.swift */; };
+		F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2377DED262D9AEA00F4E674 /* touteng-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "touteng-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touteng_swiftApp.swift; sourceTree = "<group>"; };
+		F2377DF2262D9AEA00F4E674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F2377DF4262D9AEB00F4E674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2377DF7262D9AEB00F4E674 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2377DF9262D9AEB00F4E674 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F2377DFC262D9AEB00F4E674 /* touteng_swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = touteng_swift.xcdatamodel; sourceTree = "<group>"; };
+		F2377DFE262D9AEB00F4E674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2377DEA262D9AEA00F4E674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2377DE4262D9AEA00F4E674 = {
+			isa = PBXGroup;
+			children = (
+				F2377DEF262D9AEA00F4E674 /* touteng-swift */,
+				F2377DEE262D9AEA00F4E674 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2377DEE262D9AEA00F4E674 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2377DED262D9AEA00F4E674 /* touteng-swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2377DEF262D9AEA00F4E674 /* touteng-swift */ = {
+			isa = PBXGroup;
+			children = (
+				F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */,
+				F2377DF2262D9AEA00F4E674 /* ContentView.swift */,
+				F2377DF4262D9AEB00F4E674 /* Assets.xcassets */,
+				F2377DF9262D9AEB00F4E674 /* Persistence.swift */,
+				F2377DFE262D9AEB00F4E674 /* Info.plist */,
+				F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */,
+				F2377DF6262D9AEB00F4E674 /* Preview Content */,
+			);
+			path = "touteng-swift";
+			sourceTree = "<group>";
+		};
+		F2377DF6262D9AEB00F4E674 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F2377DF7262D9AEB00F4E674 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2377DEC262D9AEA00F4E674 /* touteng-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2377E01262D9AEB00F4E674 /* Build configuration list for PBXNativeTarget "touteng-swift" */;
+			buildPhases = (
+				F2377DE9262D9AEA00F4E674 /* Sources */,
+				F2377DEA262D9AEA00F4E674 /* Frameworks */,
+				F2377DEB262D9AEA00F4E674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "touteng-swift";
+			productName = "touteng-swift";
+			productReference = F2377DED262D9AEA00F4E674 /* touteng-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2377DE5262D9AEA00F4E674 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F2377DEC262D9AEA00F4E674 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = F2377DE8262D9AEA00F4E674 /* Build configuration list for PBXProject "touteng-swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2377DE4262D9AEA00F4E674;
+			productRefGroup = F2377DEE262D9AEA00F4E674 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2377DEC262D9AEA00F4E674 /* touteng-swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2377DEB262D9AEA00F4E674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2377DF8262D9AEB00F4E674 /* Preview Assets.xcassets in Resources */,
+				F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2377DE9262D9AEA00F4E674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */,
+				F2377DFA262D9AEB00F4E674 /* Persistence.swift in Sources */,
+				F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */,
+				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F2377DFF262D9AEB00F4E674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2377E00262D9AEB00F4E674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2377E02262D9AEB00F4E674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"touteng-swift/Preview Content\"";
+				DEVELOPMENT_TEAM = J38GUMV4B8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "touteng-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eden.touteng.touteng-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2377E03262D9AEB00F4E674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"touteng-swift/Preview Content\"";
+				DEVELOPMENT_TEAM = J38GUMV4B8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "touteng-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eden.touteng.touteng-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2377DE8262D9AEA00F4E674 /* Build configuration list for PBXProject "touteng-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2377DFF262D9AEB00F4E674 /* Debug */,
+				F2377E00262D9AEB00F4E674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2377E01262D9AEB00F4E674 /* Build configuration list for PBXNativeTarget "touteng-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2377E02262D9AEB00F4E674 /* Debug */,
+				F2377E03262D9AEB00F4E674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2377DFC262D9AEB00F4E674 /* touteng_swift.xcdatamodel */,
+			);
+			currentVersion = F2377DFC262D9AEB00F4E674 /* touteng_swift.xcdatamodel */;
+			path = touteng_swift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F2377DE5262D9AEA00F4E674 /* Project object */;
+}
