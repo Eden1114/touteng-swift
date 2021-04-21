@@ -7,15 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06635379A0CB32CD5951560E /* Pods_touteng_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA2E465CB5543A7AEA5763 /* Pods_touteng_swiftTests.framework */; };
+		58F6ABF5A1FF11E420175DEE /* Pods_touteng_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C0E43E1995243B2B647DDA /* Pods_touteng_swift.framework */; };
 		F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */; };
 		F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF2262D9AEA00F4E674 /* ContentView.swift */; };
 		F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2377DF4262D9AEB00F4E674 /* Assets.xcassets */; };
 		F2377DF8262D9AEB00F4E674 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2377DF7262D9AEB00F4E674 /* Preview Assets.xcassets */; };
 		F2377DFA262D9AEB00F4E674 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF9262D9AEB00F4E674 /* Persistence.swift */; };
 		F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */; };
+		F2377E0C262DA48000F4E674 /* touteng_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E0B262DA48000F4E674 /* touteng_swiftTests.swift */; };
+		F2377E16262F08D400F4E674 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E15262F08D400F4E674 /* Cell.swift */; };
+		F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E1926300DBA00F4E674 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F2377E0E262DA48000F4E674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2377DE5262D9AEA00F4E674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2377DEC262D9AEA00F4E674;
+			remoteInfo = "touteng-swift";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		20753EE1895367F424E2393F /* Pods-touteng-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swift.release.xcconfig"; path = "Target Support Files/Pods-touteng-swift/Pods-touteng-swift.release.xcconfig"; sourceTree = "<group>"; };
+		23CA2E465CB5543A7AEA5763 /* Pods_touteng_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_touteng_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C0E43E1995243B2B647DDA /* Pods_touteng_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_touteng_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB194E7B124186DF030A6D1 /* Pods-touteng-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swiftTests.debug.xcconfig"; path = "Target Support Files/Pods-touteng-swiftTests/Pods-touteng-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC74046A8BDCF9C56936FF43 /* Pods-touteng-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swift.debug.xcconfig"; path = "Target Support Files/Pods-touteng-swift/Pods-touteng-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD63DC1C1645C23269D404D /* Pods-touteng-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swiftTests.release.xcconfig"; path = "Target Support Files/Pods-touteng-swiftTests/Pods-touteng-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2377DED262D9AEA00F4E674 /* touteng-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "touteng-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touteng_swiftApp.swift; sourceTree = "<group>"; };
 		F2377DF2262D9AEA00F4E674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +45,11 @@
 		F2377DF9262D9AEB00F4E674 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F2377DFC262D9AEB00F4E674 /* touteng_swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = touteng_swift.xcdatamodel; sourceTree = "<group>"; };
 		F2377DFE262D9AEB00F4E674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2377E09262DA48000F4E674 /* touteng-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "touteng-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2377E0B262DA48000F4E674 /* touteng_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touteng_swiftTests.swift; sourceTree = "<group>"; };
+		F2377E0D262DA48000F4E674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2377E15262F08D400F4E674 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		F2377E1926300DBA00F4E674 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F6ABF5A1FF11E420175DEE /* Pods_touteng_swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2377E06262DA48000F4E674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06635379A0CB32CD5951560E /* Pods_touteng_swiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BA5A60970EB19B6527C6F05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68C0E43E1995243B2B647DDA /* Pods_touteng_swift.framework */,
+				23CA2E465CB5543A7AEA5763 /* Pods_touteng_swiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9F0F469340B546099C704EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC74046A8BDCF9C56936FF43 /* Pods-touteng-swift.debug.xcconfig */,
+				20753EE1895367F424E2393F /* Pods-touteng-swift.release.xcconfig */,
+				6AB194E7B124186DF030A6D1 /* Pods-touteng-swiftTests.debug.xcconfig */,
+				CFD63DC1C1645C23269D404D /* Pods-touteng-swiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F2377DE4262D9AEA00F4E674 = {
 			isa = PBXGroup;
 			children = (
 				F2377DEF262D9AEA00F4E674 /* touteng-swift */,
+				F2377E0A262DA48000F4E674 /* touteng-swiftTests */,
 				F2377DEE262D9AEA00F4E674 /* Products */,
+				E9F0F469340B546099C704EC /* Pods */,
+				8BA5A60970EB19B6527C6F05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F2377DED262D9AEA00F4E674 /* touteng-swift.app */,
+				F2377E09262DA48000F4E674 /* touteng-swiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +123,8 @@
 				F2377DFE262D9AEB00F4E674 /* Info.plist */,
 				F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */,
 				F2377DF6262D9AEB00F4E674 /* Preview Content */,
+				F2377E15262F08D400F4E674 /* Cell.swift */,
+				F2377E1926300DBA00F4E674 /* NetworkManager.swift */,
 			);
 			path = "touteng-swift";
 			sourceTree = "<group>";
@@ -75,6 +137,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F2377E0A262DA48000F4E674 /* touteng-swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2377E0B262DA48000F4E674 /* touteng_swiftTests.swift */,
+				F2377E0D262DA48000F4E674 /* Info.plist */,
+			);
+			path = "touteng-swiftTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2377E01262D9AEB00F4E674 /* Build configuration list for PBXNativeTarget "touteng-swift" */;
 			buildPhases = (
+				C60D756A55A4B6E71A8D3D8A /* [CP] Check Pods Manifest.lock */,
 				F2377DE9262D9AEA00F4E674 /* Sources */,
 				F2377DEA262D9AEA00F4E674 /* Frameworks */,
 				F2377DEB262D9AEA00F4E674 /* Resources */,
+				51C73F36F2DC4695D389404B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -94,6 +167,25 @@
 			productName = "touteng-swift";
 			productReference = F2377DED262D9AEA00F4E674 /* touteng-swift.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F2377E08262DA48000F4E674 /* touteng-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2377E10262DA48000F4E674 /* Build configuration list for PBXNativeTarget "touteng-swiftTests" */;
+			buildPhases = (
+				06160F1BEFB2A5EBDB86EF5D /* [CP] Check Pods Manifest.lock */,
+				F2377E05262DA48000F4E674 /* Sources */,
+				F2377E06262DA48000F4E674 /* Frameworks */,
+				F2377E07262DA48000F4E674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2377E0F262DA48000F4E674 /* PBXTargetDependency */,
+			);
+			name = "touteng-swiftTests";
+			productName = "touteng-swiftTests";
+			productReference = F2377E09262DA48000F4E674 /* touteng-swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +198,10 @@
 				TargetAttributes = {
 					F2377DEC262D9AEA00F4E674 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					F2377E08262DA48000F4E674 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F2377DEC262D9AEA00F4E674;
 					};
 				};
 			};
@@ -123,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				F2377DEC262D9AEA00F4E674 /* touteng-swift */,
+				F2377E08262DA48000F4E674 /* touteng-swiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,7 +234,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2377E07262DA48000F4E674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06160F1BEFB2A5EBDB86EF5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-touteng-swiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51C73F36F2DC4695D389404B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-touteng-swift/Pods-touteng-swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-touteng-swift/Pods-touteng-swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-touteng-swift/Pods-touteng-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60D756A55A4B6E71A8D3D8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-touteng-swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2377DE9262D9AEA00F4E674 /* Sources */ = {
@@ -146,12 +314,30 @@
 			files = (
 				F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */,
 				F2377DFA262D9AEB00F4E674 /* Persistence.swift in Sources */,
+				F2377E16262F08D400F4E674 /* Cell.swift in Sources */,
 				F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */,
+				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
 				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2377E05262DA48000F4E674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2377E0C262DA48000F4E674 /* touteng_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2377E0F262DA48000F4E674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2377DEC262D9AEA00F4E674 /* touteng-swift */;
+			targetProxy = F2377E0E262DA48000F4E674 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F2377DFF262D9AEB00F4E674 /* Debug */ = {
@@ -272,6 +458,7 @@
 		};
 		F2377E02262D9AEB00F4E674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC74046A8BDCF9C56936FF43 /* Pods-touteng-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +481,7 @@
 		};
 		F2377E03262D9AEB00F4E674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20753EE1895367F424E2393F /* Pods-touteng-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +502,48 @@
 			};
 			name = Release;
 		};
+		F2377E11262DA48000F4E674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB194E7B124186DF030A6D1 /* Pods-touteng-swiftTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J38GUMV4B8;
+				INFOPLIST_FILE = "touteng-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eden.touteng.touteng-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touteng-swift.app/touteng-swift";
+			};
+			name = Debug;
+		};
+		F2377E12262DA48000F4E674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD63DC1C1645C23269D404D /* Pods-touteng-swiftTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J38GUMV4B8;
+				INFOPLIST_FILE = "touteng-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eden.touteng.touteng-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touteng-swift.app/touteng-swift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +561,15 @@
 			buildConfigurations = (
 				F2377E02262D9AEB00F4E674 /* Debug */,
 				F2377E03262D9AEB00F4E674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2377E10262DA48000F4E674 /* Build configuration list for PBXNativeTarget "touteng-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2377E11262DA48000F4E674 /* Debug */,
+				F2377E12262DA48000F4E674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
