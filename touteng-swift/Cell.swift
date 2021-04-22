@@ -6,19 +6,7 @@
 //
 
 import SwiftUI
-
-// model
-struct PostList:Codable {
-    var list: [Post]
-}
-
-struct Post: Codable, Identifiable {
-    let id :Int
-    let avatar: String
-    let name: String
-    
-}
-
+import Alamofire
 // GUI
 struct Cell: View {
     @State private var text = ""
@@ -43,48 +31,21 @@ struct Cell: View {
         .padding()
         
     }
-    
+    func startLoad() {
+        let parameters = [
+            "category":"all", // "tech", "military", "entertainment",
+            "request_type":"1", // "2" 1 for 下拉刷新 2 for 上滑屏幕
+            "response_extra":""
+        ]
+        NetworkAPI.getList(parameters:parameters) { result in
+            switch result {
+            case let .success(list): NSLog(list.gid)
+            case let .failure(error): NSLog(error.localizedDescription)
+            }
+        }
+    }
     
     // demo of network
-    func startLoad() {
-        let url = URL(string : "http://post.api")!
-        
-        var request = URLRequest(url:url)
-        request.timeoutInterval = 15
-        request.httpMethod = "POST"
-        
-        let dic = ["key": "value"]
-        let data = try! JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
-        
-        request.httpBody = data
-        request.addValue("application/json", forHTTPHeaderField: "Content/Type")
-        
-        let task = URLSession.shared.dataTask(with:url) {
-            data, response, error in
-            if let error = error {
-                self.updateText(error.localizedDescription)
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-            httpResponse.statusCode == 200 else {
-                self.updateText("Invalid Response")
-                return
-            }
-            
-            guard let data = data else {
-                self.updateText("No data")
-                return
-            }
-            
-            guard let list = try? JSONDecoder().decode(PostList.self, from:data) else {
-                self.updateText("parse error")
-                return
-            }
-            self.updateText(list.list.description)
-        }
-        task.resume()
-    }
     
     func updateText(_ Text:String) {
         DispatchQueue.main.async {

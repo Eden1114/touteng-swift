@@ -103,27 +103,78 @@ struct toutengView: View {
 
 
 struct ContentView: View {
+    @State private var text = ""
     var body: some View {
-        return TabView {
-            //添加一个文本视图，作为标签视图的第一个标签项。
-            Text("The home page.")
-            .font(.system(size: 36))
-            //接着来设置文本视图的选项卡，只有设置了选项卡，才会在屏幕底部的选项卡列表里显示对应的标签。
-            .tabItem({
-                Image(systemName: "house")
-                Text("Home") })
-            .tag(0)
+        return NavigationView {
+            Form {
+                Section {
+                    Text("Hello World")
+                }
+                Section {
+                    Text("Hello World")
+                }
+            }
+            .navigationBarTitle(Text("头疼"))
+            
+            TabView {
+                VStack {
+                    Text("The home page.")
+                }
+                .tabItem({
+                    Image(systemName: "gear")
+                    Text("全部")
+                    RoundedRectangle(cornerRadius: 10.0)
+                })
+                .tag(0)
 
-            //继续添加另一个文本视图，作为标签视图的第二个标签项。
-            Text("The settings page.")
-            .font(.system(size: 36))
-            .tabItem({
-                Image(systemName: "gear")
-                Text("Settings")
-                RoundedRectangle(cornerRadius: 10.0)
-            })
-            .tag(1)
+                VStack {
+                    Text("The settings page.")
+                }
+                .tabItem({
+                    Image(systemName: "gear")
+                    Text("军事")
+                    RoundedRectangle(cornerRadius: 10.0)
+                })
+                .tag(1)
+               
+                
+                VStack {
+                    Text("The settings page.")
+                }
+                .tabItem({
+                    Image(systemName: "gear")
+                    Text("娱乐")
+                    RoundedRectangle(cornerRadius: 10.0)
+                })
+                .tag(1)
+              }
+            }
         }
+
+            
+            
+//            Button(action: {
+//                self.startLoad()
+//            }) {
+//                Text("Start").font(.largeTitle)
+//            }
+                    
+    func startLoad() -> Void {
+//        _ = NetworkManager.shared.requestGet(path:"123", parameters: nil) {_ in
+//            print(123)
+//        }
+        NetworkAPI.getList(parameters:
+                            ["category":"all",
+                             "request_type": "1",
+                             "response_extra":""]) {result in
+            switch result {
+            case let .success(list): self.update(list.gid)
+            case let .failure(error): self.update(error.localizedDescription)
+            }
+        }
+    }
+    func update(_ text: String) {
+        NSLog(text)
     }
 }
 

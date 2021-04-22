@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,9 @@
 		F2377E0C262DA48000F4E674 /* touteng_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E0B262DA48000F4E674 /* touteng_swiftTests.swift */; };
 		F2377E16262F08D400F4E674 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E15262F08D400F4E674 /* Cell.swift */; };
 		F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E1926300DBA00F4E674 /* NetworkManager.swift */; };
+		F2453BB526305AA600240C47 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2453BB426305AA600240C47 /* NetworkAPI.swift */; };
+		F26C3445263150B400A4189D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3444263150B400A4189D /* Post.swift */; };
+		F26C344B2631713B00A4189D /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C344A2631713B00A4189D /* ArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		F2377E0D262DA48000F4E674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2377E15262F08D400F4E674 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F2377E1926300DBA00F4E674 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F2453BB426305AA600240C47 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		F26C3444263150B400A4189D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F26C344A2631713B00A4189D /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +95,6 @@
 				6AB194E7B124186DF030A6D1 /* Pods-touteng-swiftTests.debug.xcconfig */,
 				CFD63DC1C1645C23269D404D /* Pods-touteng-swiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +130,9 @@
 				F2377DF6262D9AEB00F4E674 /* Preview Content */,
 				F2377E15262F08D400F4E674 /* Cell.swift */,
 				F2377E1926300DBA00F4E674 /* NetworkManager.swift */,
+				F2453BB426305AA600240C47 /* NetworkAPI.swift */,
+				F26C3444263150B400A4189D /* Post.swift */,
+				F26C344A2631713B00A4189D /* ArticleView.swift */,
 			);
 			path = "touteng-swift";
 			sourceTree = "<group>";
@@ -314,6 +322,9 @@
 			files = (
 				F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */,
 				F2377DFA262D9AEB00F4E674 /* Persistence.swift in Sources */,
+				F26C344B2631713B00A4189D /* ArticleView.swift in Sources */,
+				F2453BB526305AA600240C47 /* NetworkAPI.swift in Sources */,
+				F26C3445263150B400A4189D /* Post.swift in Sources */,
 				F2377E16262F08D400F4E674 /* Cell.swift in Sources */,
 				F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */,
 				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
