@@ -82,7 +82,7 @@
 
 import SwiftUI
 import Foundation
-
+import SwiftyJSON
 
 struct toutengView: View {
     var body: some View {
@@ -119,6 +119,11 @@ struct ContentView: View {
             TabView {
                 VStack {
                     Text("The home page.")
+                    Button(action: {
+                        self.startLoad()
+                    }) {
+                        Text("Start").font(.largeTitle)
+                    }
                 }
                 .tabItem({
                     Image(systemName: "gear")
@@ -150,31 +155,23 @@ struct ContentView: View {
               }
             }
         }
-
-            
-            
-//            Button(action: {
-//                self.startLoad()
-//            }) {
-//                Text("Start").font(.largeTitle)
-//            }
                     
     func startLoad() -> Void {
-//        _ = NetworkManager.shared.requestGet(path:"123", parameters: nil) {_ in
-//            print(123)
-//        }
         NetworkAPI.getList(parameters:
                             ["category":"all",
                              "request_type": "1",
                              "response_extra":""]) {result in
             switch result {
-            case let .success(list): self.update(list.gid)
+            case let .success(data):
+                let json = try! JSON(data: data)
+                self.update(json["code"])
             case let .failure(error): self.update(error.localizedDescription)
             }
         }
     }
-    func update(_ text: String) {
-        NSLog(text)
+    func update(_ text: Any) {
+//        NSLog(text)
+        debugPrint(text)
     }
 }
 

@@ -8,14 +8,27 @@
 import Foundation
 import Alamofire
 
+typealias APICompletion = (Result<Any, Error>) -> Void
+
 class NetworkAPI {
     static func getList(parameters:Parameters,
-                        completion: @escaping (Result<Article, Error>)-> Void) {
-        NetworkManager.shared.requestGet(path: "list", parameters: parameters) { result in
+                        completion: @escaping (Result<Data, Error>) -> Void) {
+        NetworkManager.shared.requestGet(path: "list/", parameters: parameters) { result in
             switch result {
             case let .success(data):
-                let parseResult:Result<Article, Error> = self.parseData(data)
-                completion(parseResult)
+                completion(.success(data))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    static func getList1(parameters:Parameters,
+                        completion: @escaping APICompletion) {
+        NetworkManager.shared.requestJSONGet(path: "list/", parameters: parameters) { result in
+            switch result {
+            case let .success(data):
+                completion(.success(data))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -23,12 +36,11 @@ class NetworkAPI {
     }
     
     static func getAdInfo(parameters:Parameters,
-                          completion: @escaping (Result<Advertisement, Error>) -> Void) {
-        NetworkManager.shared.requestGet(path: "ad_info", parameters: parameters) { result in
+                          completion: @escaping APICompletion) {
+        NetworkManager.shared.requestJSONGet(path: "ad_info/", parameters: parameters) { result in
             switch result {
             case let .success(data):
-                let parseResult:Result<Advertisement, Error> = self.parseData(data)
-                completion(parseResult)
+                completion(.success(data))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -36,12 +48,13 @@ class NetworkAPI {
     }
     
     
-    //    generic type
-    private static func parseData<T: Decodable> (_ data: Data) -> Result<T, Error> {
-        guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
-            let error = NSError(domain: "network api error",code: 201, userInfo: [NSLocalizedDescriptionKey : "Can not parse data"])
-            return .failure(error)
-        }
-        return .success(decodedData)
-    }
+    // generic type
+    // depreated
+//    private static func parseData<T: Decodable> (_ data: Data) -> Result<T, Error> {
+//        guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
+//            let error = NSError(domain: "network api error",code: 201, userInfo: [NSLocalizedDescriptionKey : "Can not parse data"])
+//            return .failure(error)
+//        }
+//        return .success(decodedData)
+//    }
 }
