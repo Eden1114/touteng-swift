@@ -7,7 +7,6 @@ target 'touteng-swift' do
 
   # Pods for touteng-swift
   pod 'Alamofire', '~> 5.2'
-  pod 'SwiftyJSON', '~> 4.0'
   target 'touteng-swiftTests' do
     inherit! :search_paths
     # Pods for testing

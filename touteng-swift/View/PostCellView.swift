@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
-import Alamofire
-// GUI
-struct Cell: View {
-    @State private var text = ""
+
+
+struct PostCell: View {
+    @State var article:Article?
+    @State private var text = "on Tap Gesture"
     
     var body: some View {
         VStack {
-            Text(text).font(.title)
+            Text(text).font(.title).onTapGesture {
+                self.text = "123"
+            }
+            
             Button(action: {
 
             }, label: {
@@ -32,6 +36,6 @@ struct Cell: View {
 
 struct Cell_Previews: PreviewProvider {
     static var previews: some View {
-        Cell()
+        PostCell()
     }
 }
