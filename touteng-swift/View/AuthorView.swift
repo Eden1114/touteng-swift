@@ -12,22 +12,29 @@ import SwiftUI
 struct AuthorView: View {
     @State var author :Author
     var body: some View {
-        HStack {
+        HStack() {
+            URLImageView(url: author.avatar)
+                .frame(width: 30, height: 30)
+                .clipShape(Circle())
             Text(author.user_name)
-            Image(author.avatar)
-//            URLImage(url: URL(string: author.avatar) ?? "default value",
-//                     content: { image in
-//                         image
-//                             .resizable()
-//                             .aspectRatio(contentMode: .fit)
-//                     })
-        }
+                .font(Font.system(size: 10))
+//                .foregroundColor(.orange)
+                .lineLimit(1)
+            
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 12).stroke(Color.red
+//                    ,lineWidth: 2)
+//
+//                )
+        }.fixedSize()
     }
 }
 
 struct AuthorView_Previews: PreviewProvider {
     static var previews: some View {
-        let author = Author(avatar: "http://p1-dy.bytexservice.com/origin/pgc-image/acce69d4feb44235852525655ca958e0", user_name: "魏医生在线")
+        
+        let author = Author(avatar: "https://p1-dy.bytexservice.com/origin/pgc-image/acce69d4feb44235852525655ca958e0", user_name: "魏医生在线")
+        
         AuthorView(author: author)
     }
 }

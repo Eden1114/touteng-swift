@@ -45,24 +45,4 @@ class NetworkAPI {
         }
         return .success(decodedData)
     }
-    
-    
-    static func getImage(url: String) {
-        
-    }
-    
-    
-    func fetchRemoteImage()
-    {
-        guard let url = URL(string: "http://hdjc8.com/images/logo.png") else { return }
-        URLSession.shared.dataTask(with: url){ (data, response, error) in
-            if let image = UIImage(data: data!){
-//                self.remoteImage = image
-//                return image
-            }
-            else{
-                print(error ?? "")
-            }
-        }.resume()
-    }
 }
