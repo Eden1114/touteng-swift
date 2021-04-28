@@ -30,6 +30,13 @@ struct Article: Codable {
     let covers: [CoverImage]
 }
 
+extension Article {
+    func getPublishTimeString() -> String {
+        return Utils.getStringFromTimeStamp(self.publish_time ?? 0)
+//        (self.publish_time ?? 0)
+    }
+}
+
 struct Advertisement: Codable {
     let gid: String
     let cell_type: Int
@@ -44,7 +51,7 @@ struct PostList: Codable {
     let data: [Article]
     let tips: String?
     let extra: String?
-    var has_more: Bool?
+    let has_more: Bool?
 }
 
 struct AdvertisementList: Codable {
@@ -53,3 +60,7 @@ struct AdvertisementList: Codable {
     let data: Advertisement
 //    let extra: String?
 }
+
+//extension CoverImage: Identifiable {
+//
+//}
