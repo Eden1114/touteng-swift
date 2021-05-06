@@ -9,30 +9,11 @@
 import SwiftUI
 import Foundation
 
-struct toutengView: View {
-    
-    var body: some View {
-        return VStack {
-            ForEach(0..<4) { index in
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10).fill(Color.white)
-                    RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
-                    Text("ghost")
-                }
-            }
-        }
-        .padding()
-        .foregroundColor(Color.orange)
-        .font(Font.largeTitle)
-    }
-}
-
-
 struct ContentView: View {
     var body: some View {
         TabView {
             VStack {
-                toutengView()
+                Text("全部")
             }
             .tabItem({
                 Image(systemName: "gear")
