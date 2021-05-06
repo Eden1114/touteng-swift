@@ -31,7 +31,6 @@ struct URLImageView: View {
         } else {
             return Image("placeholder").resizable()
         }
-        
     }
 }
 

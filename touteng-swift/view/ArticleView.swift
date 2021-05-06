@@ -15,11 +15,31 @@ struct ArticleView: View {
         VStack {
             Text(article.title)
             
-            URLImageView(url: article.covers[0].url)
-                .frame(width: 100, height: 80, alignment: .center)
+            Text("Cell Type:"+String(article.cell_type))
+            
+            Text(article.getPublishTimeString())
+            
+            
+            if (article.cell_type == 1) {
+                
+            } else if (article.cell_type == 2) {
+                
+            } else {
+                
+            }
+//            article.article_url
+//            article.
+            HStack {
+                ForEach(article.covers.indices, id: \.self) { index in
+                    URLImageView(url: article.covers[index].url)
+                        .frame(width: 100, height: 80, alignment: .leading)
+                }
+            }
+            
             HStack {
                 AuthorView(author: article.author_info)
             }
+            
         }.onTapGesture(perform: {
             // TODO
         })
