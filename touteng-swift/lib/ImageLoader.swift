@@ -7,10 +7,6 @@
 
 import Foundation
 
-
-
-import Foundation
-
 class ImageLoader: ObservableObject {
     
     @Published var downloadedData: Data?
