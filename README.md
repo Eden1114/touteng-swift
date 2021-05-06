@@ -4,7 +4,7 @@
 
 touteng-swift is a light SWiftUI demo for e-commerce class.
 
-## Doc
+## Docs
 
 [Development Docs](https://docs.qq.com/doc/DS0tuZnpISml6VWpZ)
 
