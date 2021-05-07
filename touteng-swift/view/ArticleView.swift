@@ -85,14 +85,14 @@ struct ArticleView: View {
                         }
                     }
                     .frame(alignment:.leading)
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal,4)
                     
                     HStack(alignment:.bottom) {
                         AuthorView(author: article.author_info)
                             
                         //Image(“801620370787_.pic_hd”)
                         Text(article.getPublishTimeString()).font(.system(size: 10))
-                    }.padding(.horizontal,5)
+                    }.padding(.horizontal,4)
                     
                 }.onTapGesture(perform: {
                     // TODO
