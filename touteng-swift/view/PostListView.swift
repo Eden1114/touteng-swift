@@ -26,9 +26,13 @@ struct PostListView: View {
     }
     
     var body: some View {
-        return List {
-            ForEach(self.postlist.data.indices) { index in
-                ArticleView(article: postlist.data[index])
+        return VStack {
+            Text("新闻")
+            
+            List {
+                ForEach(self.postlist.data.indices) { index in
+                    ArticleView(article: postlist.data[index])
+                }
             }
         }
     }
