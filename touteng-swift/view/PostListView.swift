@@ -15,7 +15,7 @@ struct PostListView: View {
         NetworkAPI.getList(parameters:
                             ["category":category,
                              "request_type": request_type,
-                             "response_extra":response_extra]) {result in
+                             "response_extra":response_extra]) { result in
             switch result {
             case let .success(postlist):
                 self.postlist = postlist
@@ -26,9 +26,14 @@ struct PostListView: View {
     }
     
     var body: some View {
-        return List {
-            ForEach(self.postlist.data.indices) { index in
-                ArticleView(article: postlist.data[index])
+        return NavigationView {
+            List {
+                ForEach(self.postlist.data.indices) { index in NavigationLink(
+                    destination: FullArticleView(webViewStore: WebViewStore(), url: postlist.data[index].article_url)
+                    ) {
+                        ArticleView(article: postlist.data[index])
+                }
+                }
             }
         }
     }
