@@ -24,43 +24,57 @@ struct ArticleView: View {
                 // TODO
             })
         }else if (article.covers.count == 1){
-            HStack{
-                VStack(alignment:.leading){
-                    Text(article.title).font(.subheadline)
-                    HStack{
-                        AuthorView(author: article.author_info)
-                        Text(article.getPublishTimeString()).font(.caption2)
+            VStack{
+                HStack(alignment:.center,spacing:15){
+                    VStack(alignment:.leading){
+                        Text(article.title).font(.subheadline)
+                        HStack{
+                            AuthorView(author: article.author_info)
+                            Text(article.getPublishTimeString()).font(.caption2)
+                        }
                     }
-                }
-                URLImageView(url: article.covers[0].url)
-                    .frame(width: 100, height: 65.3, alignment: .leading)
-            }.onTapGesture(perform: {
+                    URLImageView(url: article.covers[0].url)
+                        .frame(width: 110, height: 72, alignment: .leading)
+                }.padding(.horizontal,5)
+            }
+            .onTapGesture(perform: {
                 // TODO
             })
         }else if (article.covers.count == 2){
-            VStack (alignment:.leading){
+            VStack(alignment:.leading,spacing:10) {
                 Text(article.title)
                     .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
-                HStack(alignment:.center) {
-                    ForEach(article.covers.indices, id: \.self) { index in
-                        URLImageView(url: article.covers[index].url)
-                            .frame(width: 80, height: 80, alignment: .leading)
+                    .padding(.horizontal,5)
+                VStack (alignment:.leading,spacing:8){
+    //                Text(article.title)
+    //                    .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
+    //                    .padding(.horizontal, 12)
+                    HStack(alignment:.center,spacing:3) {
+                        ForEach(article.covers.indices, id: \.self) { index in
+                            URLImageView(url: article.covers[index].url)
+                                .frame(width: 144, height: 94, alignment: .leading).clipShape(RoundedRectangle(cornerRadius: 5))
+                        }
                     }
-                }.padding(.horizontal, 12)
-                .frame(alignment:.leading)
-                HStack{
-                    AuthorView(author: article.author_info)
-                    Text(article.getPublishTimeString()).font(.caption2)
-                }
-            }.onTapGesture(perform: {
-                // TODO
-            })
+                    .frame(alignment:.leading)
+                    .padding(.horizontal, 5)
+                    
+                    HStack(alignment:.bottom) {
+                        AuthorView(author: article.author_info)
+                            
+                        //Image(“801620370787_.pic_hd”)
+                        Text(article.getPublishTimeString()).font(.system(size: 10))
+                    }.padding(.horizontal,5)
+                    
+                }.onTapGesture(perform: {
+                    // TODO
+                })
+            }
         }else {
-            VStack {
+            VStack(alignment:.leading,spacing:10) {
                 Text(article.title)
                     .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
-                    .padding(.horizontal, 12)
-                VStack (alignment:.leading,spacing:1){
+                    .padding(.horizontal,5)
+                VStack (alignment:.leading,spacing:8){
     //                Text(article.title)
     //                    .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
     //                    .padding(.horizontal, 12)
@@ -71,14 +85,14 @@ struct ArticleView: View {
                         }
                     }
                     .frame(alignment:.leading)
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, 8)
                     
-                    HStack {
+                    HStack(alignment:.bottom) {
                         AuthorView(author: article.author_info)
                             
                         //Image(“801620370787_.pic_hd”)
-                        Text(article.getPublishTimeString()).font(.caption2)
-                    }.padding(12)
+                        Text(article.getPublishTimeString()).font(.system(size: 10))
+                    }.padding(.horizontal,5)
                     
                 }.onTapGesture(perform: {
                     // TODO

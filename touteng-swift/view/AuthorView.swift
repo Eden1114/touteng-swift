@@ -14,11 +14,11 @@ struct AuthorView: View {
     var body: some View {
         HStack() {
             URLImageView(url: author.avatar)
-                .frame(width: 20, height: 20)
+                .frame(width: 10, height: 10)
             Text(author.user_name)
                 .font(.custom("STZhongsong",size: 10))
 //                .foregroundColor(.orange)
-                .lineLimit(1)
+//                .lineLimit(1)
             
 //                .overlay(
 //                    RoundedRectangle(cornerRadius: 12).stroke(Color.red
