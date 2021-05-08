@@ -10,10 +10,39 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
+//    @State var all_list:PostList
+//    @State var ad:AdvertisementList
+    
+    func loadList() -> Void {
+        NetworkAPI.getList(parameters: ["":""]) {result in
+            switch result {
+            case let .success(postlist):
+                let _ = postlist
+//                self.all_list = postlist
+            case let .failure(error):
+                debugPrint(error)
+            }
+        }
+    }
+    
+    func loadAd() -> Void {
+        NetworkAPI.getAdInfo(parameters: nil) {result in
+            switch result {
+            case let .success(ads):
+                let _ = ads
+//                self.ad = ads
+            case let .failure(error):
+                debugPrint(error)
+            }
+        }
+    }
+    
     var body: some View {
         TabView {
             VStack {
-                Text("全部")
+//                var postlist = startAdLoad()
+//                PostListView(postlist: PostList)
+//                Text()
             }
             .tabItem({
                 Image(systemName: "gear")
@@ -43,18 +72,6 @@ struct ContentView: View {
     }
 
     
-//    func startAdLoad() -> Void {
-//        NetworkAPI.getAdInfo(parameters: nil) {result in
-//            switch result {
-//            case let .success(postlist):
-//                let list = postlist
-//                self.update(list)
-//                break
-//            case let .failure(error):
-//                debugPrint(error)
-//            }
-//        }
-//    }
 }
 
 
