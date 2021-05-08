@@ -40,6 +40,8 @@ struct PostListView: View {
                     }
                 }
             }
+            .navigationBarTitle("Bar title")
+//            .navigationBarHidden(true)
         }
     }
 }
