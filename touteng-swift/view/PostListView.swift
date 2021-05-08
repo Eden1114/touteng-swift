@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PostListView: View {
     @State var postlist:PostList
+    var webviewstore = WebViewStore()
     
     func loadList(category:String, request_type: String, response_extra:String) -> Void {
         
@@ -28,11 +29,15 @@ struct PostListView: View {
     var body: some View {
         return NavigationView {
             List {
-                ForEach(self.postlist.data.indices) { index in NavigationLink(
-                    destination: FullArticleView(webViewStore: WebViewStore(), url: postlist.data[index].article_url)
-                    ) {
+                ForEach(self.postlist.data.indices) { index in
+                    ZStack {
                         ArticleView(article: postlist.data[index])
-                }
+                        
+                        NavigationLink(destination: FullArticleView(webViewStore: self.webviewstore, url: postlist.data[index].article_url)
+                        ) {
+                            EmptyView()
+                        }.hidden()
+                    }
                 }
             }
         }
