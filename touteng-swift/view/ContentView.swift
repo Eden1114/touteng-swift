@@ -10,40 +10,11 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-//    @State var all_list:PostList
-//    @State var ad:AdvertisementList
-    
-    func loadList() -> Void {
-        NetworkAPI.getList(parameters: ["":""]) {result in
-            switch result {
-            case let .success(postlist):
-                let _ = postlist
-//                self.all_list = postlist
-            case let .failure(error):
-                debugPrint(error)
-            }
-        }
-    }
-    
-    func loadAd() -> Void {
-        NetworkAPI.getAdInfo(parameters: nil) {result in
-            switch result {
-            case let .success(ads):
-                let _ = ads
-//                self.ad = ads
-            case let .failure(error):
-                debugPrint(error)
-            }
-        }
-    }
+    @EnvironmentObject var userData:UserData
     
     var body: some View {
         TabView {
-            VStack {
-//                var postlist = startAdLoad()
-//                PostListView(postlist: PostList)
-//                Text()
-            }
+            PostListView(category: .all).environmentObject(userData)
             .tabItem({
                 Image(systemName: "gear")
                 Text("全部")
@@ -58,6 +29,9 @@ struct ContentView: View {
                 Text("军事")
                 RoundedRectangle(cornerRadius: 10.0)
             })
+            .onAppear {
+                // TODO
+            }
            
             
             VStack {
@@ -70,14 +44,12 @@ struct ContentView: View {
             })
         }
     }
-
-    
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserData())
     }
 }
 

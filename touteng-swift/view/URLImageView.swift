@@ -29,7 +29,10 @@ struct URLImageView: View {
             return Image(uiImage: UIImage(data: data)!)
                 .resizable()
         } else {
-            return Image("placeholder").resizable()
+            // TODO no Image
+//            return Image("icybay").resizable()
+//            return Image("time.jpg").resizable()
+            return Image(uiImage: UIImage(imageLiteralResourceName: "logo120.png")).resizable()
         }
     }
 }

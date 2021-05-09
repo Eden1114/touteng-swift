@@ -17,21 +17,27 @@ struct testView: View {
  
     @State var str = "原图"
     
-    var body: some View {
-        let tad = DragGesture()
-            .onChanged { value in
-                if(value.translation.width > 0) {
-                    print("右滑动")
-                }else {
-                    print("左滑动")
-                }
-        }.onEnded { _ in
-            self.str = "新图"
-        }
-        
-        return TabView {
-            Text("\(str)")
-        }.gesture(tad)
+//    var body: some View {
+//        let tad = DragGesture()
+//            .onChanged { value in
+//                if(value.translation.width > 0) {
+//                    print("右滑动")
+//                }else {
+//                    print("左滑动")
+//                }
+//        }.onEnded { _ in
+//            self.str = "新图"
+//        }
+//
+//        return TabView {
+//            Text("\(str)")
+//        }.gesture(tad)
+//    }
+    
+    var body:some View {
+//        Image("placeholder")
+//        Image("icybay")
+        Image("AppIcon").resizable()
     }
 }
 

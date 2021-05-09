@@ -19,11 +19,11 @@ typealias NetworkJSONRequestCompletion = (NetworkJSONRequestResult) -> Void
 
 
 class NetworkManager {
-    static let shared = NetworkManager() // Singlon Mode
+    // Singlon Mode
+    static let shared = NetworkManager()
+    private init() {}
     
     var commonHeaders: HTTPHeaders{[]}
-    
-    private init() {}
     
     @discardableResult
     func requestGet(path: String, parameters: Parameters?, completion: @escaping NetworkRequestCompletion) -> DataRequest {

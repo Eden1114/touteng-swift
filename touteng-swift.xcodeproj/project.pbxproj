@@ -10,7 +10,7 @@
 		06635379A0CB32CD5951560E /* Pods_touteng_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA2E465CB5543A7AEA5763 /* Pods_touteng_swiftTests.framework */; };
 		58F6ABF5A1FF11E420175DEE /* Pods_touteng_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C0E43E1995243B2B647DDA /* Pods_touteng_swift.framework */; };
 		F20EEF022636949C003F8E90 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EEF012636949C003F8E90 /* AuthorView.swift */; };
-		F20EEF102636B9C6003F8E90 /* getlist.json in Resources */ = {isa = PBXBuildFile; fileRef = F20EEF0F2636B9C6003F8E90 /* getlist.json */; };
+		F20EEF102636B9C6003F8E90 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F20EEF0F2636B9C6003F8E90 /* list.json */; };
 		F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */; };
 		F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377DF2262D9AEA00F4E674 /* ContentView.swift */; };
 		F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2377DF4262D9AEB00F4E674 /* Assets.xcassets */; };
@@ -21,6 +21,9 @@
 		F252EC552643EE6400969BA2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC542643EE6400969BA2 /* Color.swift */; };
 		F252EC572643EEF600969BA2 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC562643EEF600969BA2 /* testView.swift */; };
 		F252EC5B2643FEFA00969BA2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC5A2643FEFA00969BA2 /* PostListView.swift */; };
+		F252EC5D2646B83400969BA2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC5C2646B83400969BA2 /* UserData.swift */; };
+		F252EC5F2647C78900969BA2 /* ad.json in Resources */ = {isa = PBXBuildFile; fileRef = F252EC5E2647C78900969BA2 /* ad.json */; };
+		F252EC6126481BC400969BA2 /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = F252EC6026481BC300969BA2 /* logo120.png */; };
 		F26C3445263150B400A4189D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3444263150B400A4189D /* Model.swift */; };
 		F26C344B2631713B00A4189D /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C344A2631713B00A4189D /* ArticleView.swift */; };
 		F27A52FE263945F200F5952C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A52FD263945F200F5952C /* WebView.swift */; };
@@ -48,7 +51,7 @@
 		CC74046A8BDCF9C56936FF43 /* Pods-touteng-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swift.debug.xcconfig"; path = "Target Support Files/Pods-touteng-swift/Pods-touteng-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD63DC1C1645C23269D404D /* Pods-touteng-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-touteng-swiftTests.release.xcconfig"; path = "Target Support Files/Pods-touteng-swiftTests/Pods-touteng-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		F20EEF012636949C003F8E90 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
-		F20EEF0F2636B9C6003F8E90 /* getlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getlist.json; sourceTree = "<group>"; };
+		F20EEF0F2636B9C6003F8E90 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		F2377DED262D9AEA00F4E674 /* touteng-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "touteng-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touteng_swiftApp.swift; sourceTree = "<group>"; };
 		F2377DF2262D9AEA00F4E674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		F252EC542643EE6400969BA2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F252EC562643EEF600969BA2 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		F252EC5A2643FEFA00969BA2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		F252EC5C2646B83400969BA2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		F252EC5E2647C78900969BA2 /* ad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ad.json; sourceTree = "<group>"; };
+		F252EC6026481BC300969BA2 /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
 		F26C3444263150B400A4189D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F26C344A2631713B00A4189D /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		F27A52FD263945F200F5952C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -127,7 +133,11 @@
 		F20EEEF5263692AD003F8E90 /* dataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F252EC6026481BC300969BA2 /* logo120.png */,
+				F252EC5C2646B83400969BA2 /* UserData.swift */,
+				F20EEF0F2636B9C6003F8E90 /* list.json */,
 				F26C3444263150B400A4189D /* Model.swift */,
+				F252EC5E2647C78900969BA2 /* ad.json */,
 			);
 			path = dataModel;
 			sourceTree = "<group>";
@@ -173,7 +183,6 @@
 				F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */,
 				F20EEEF8263692C3003F8E90 /* view */,
 				F2377DF4262D9AEB00F4E674 /* Assets.xcassets */,
-				F20EEF0F2636B9C6003F8E90 /* getlist.json */,
 				F20EEEF22636929B003F8E90 /* lib */,
 				F2377DFE262D9AEB00F4E674 /* Info.plist */,
 				F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */,
@@ -274,7 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20EEF102636B9C6003F8E90 /* getlist.json in Resources */,
+				F252EC5F2647C78900969BA2 /* ad.json in Resources */,
+				F20EEF102636B9C6003F8E90 /* list.json in Resources */,
+				F252EC6126481BC400969BA2 /* logo120.png in Resources */,
 				F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +381,7 @@
 				F252EC5B2643FEFA00969BA2 /* PostListView.swift in Sources */,
 				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
 				F27A52FE263945F200F5952C /* WebView.swift in Sources */,
+				F252EC5D2646B83400969BA2 /* UserData.swift in Sources */,
 				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
 				F27C678D263710E8007A7E70 /* URLImageView.swift in Sources */,
 				F27A53022639464B00F5952C /* FullArticleView.swift in Sources */,
