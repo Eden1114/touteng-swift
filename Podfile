@@ -7,6 +7,8 @@ target 'touteng-swift' do
 
   # Pods for touteng-swift
   pod 'Alamofire', '~> 5.2'
+  pod 'SDWebImageSwiftUI'
+  pod 'BBSwiftUIKit'
   target 'touteng-swiftTests' do
     inherit! :search_paths
     # Pods for testing

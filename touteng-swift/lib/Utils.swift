@@ -20,4 +20,13 @@ class Utils {
         return dateString.components(separatedBy: " ").first!
     }
     
+    
+    static func http2https(_ httpUrl:String) -> String {
+        var s = httpUrl
+        if s.hasPrefix("http://") {
+            s = s.replacingOccurrences(of: "http://", with: "https://")
+        }
+        return s
+    }
+    
 }

@@ -8,15 +8,15 @@
 import Foundation
 import Alamofire
 
-typealias APICompletion = (Result<PostList, Error>) -> Void
+typealias APICompletion = (Result<ArticleListResponse, Error>) -> Void
 
 class NetworkAPI {
     static func getList(parameters:Parameters?,
-                        completion: @escaping (Result<PostList, Error>) -> Void) {
+                        completion: @escaping (Result<ArticleListResponse, Error>) -> Void) {
         NetworkManager.shared.requestGet(path: "list/", parameters: parameters) { result in
             switch result {
             case let .success(data):
-                let parsedReuslt:Result<PostList, Error> = self.parseData(data)
+                let parsedReuslt:Result<ArticleListResponse, Error> = self.parseData(data)
                 completion(parsedReuslt)
             case let .failure(error):
                 completion(.failure(error))
@@ -25,11 +25,11 @@ class NetworkAPI {
     }
         
     static func getAdInfo(parameters:Parameters?,
-                          completion: @escaping (Result<AdvertisementList, Error>) -> Void) {
+                          completion: @escaping (Result<AdvertisementResponse, Error>) -> Void) {
         NetworkManager.shared.requestGet(path: "ad_info/", parameters: parameters) { result in
             switch result {
             case let .success(data):
-                let parsedReuslt:Result<AdvertisementList, Error> = self.parseData(data)
+                let parsedReuslt:Result<AdvertisementResponse, Error> = self.parseData(data)
                 completion(parsedReuslt)
             case let .failure(error):
                 completion(.failure(error))

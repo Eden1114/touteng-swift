@@ -13,31 +13,52 @@ struct Author: Codable {
     let user_name:String
 }
 
-struct CoverImage: Codable {
+struct CoverImage {
     let width: Int  // 300
     let height: Int // 196
     let url: String
     let url_large: String
 }
 
-struct Article: Codable {
+extension CoverImage:Codable,Identifiable {
+    var id: String {
+        url
+    }
+    
+    var Url:URL {
+        return URL(string: Utils.http2https(url))!
+    }
+    
+    var Url_large: URL {
+        return URL(string: Utils.http2https(url_large))!
+    }
+}
+
+struct Article {
+    let gid: String
     let article_url: String
     let cell_type: Int
     let title: String
     let author_info: Author
     let publish_time: Int?
-    let gid: String
     let covers: [CoverImage]
 }
 
-extension Article {
-    // compute property
+extension Article:Codable, Identifiable, Equatable {
+    var id: String {
+        return gid
+    }
+    
     func getPublishTimeString() -> String {
         return Utils.getStringFromTimeStamp(self.publish_time ?? 0)
     }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.gid == rhs.gid
+    }
 }
 
-struct Advertisement: Codable {
+struct Advertisement {
     let gid: String
     let cell_type: Int
     let title: String
@@ -45,7 +66,13 @@ struct Advertisement: Codable {
     let covers: [CoverImage]
 }
 
-struct PostList: Codable {
+extension Advertisement:Codable, Identifiable {
+    var id: String {
+        return gid
+    }
+}
+
+struct ArticleListResponse: Codable {
     let code: Int
     let message: String
     let data: [Article]
@@ -54,7 +81,7 @@ struct PostList: Codable {
     let has_more: Bool?
 }
 
-struct AdvertisementList: Codable {
+struct AdvertisementResponse: Codable {
     let code: Int
     let message: String
     let data: Advertisement

@@ -33,7 +33,7 @@ class NetworkManager {
             .responseData {response in
             switch response.result {
             case let .success(data):
-                debugPrint(response)
+//                debugPrint(response)
                 completion(.success(data))
             case let .failure(error): completion(.failure(error))
             }
