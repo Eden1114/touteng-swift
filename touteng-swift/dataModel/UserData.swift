@@ -33,7 +33,7 @@ class UserData: ObservableObject {
     @Published var isRefreshing:Bool = false
     @Published var isLoadingMore:Bool = false
     @Published var loadingError: Error?
-    @Published var error: Error?
+//    @Published var error: Error?
     
     @Published var postlists:[PostListCategory:[Article]] = [
         .all:[],

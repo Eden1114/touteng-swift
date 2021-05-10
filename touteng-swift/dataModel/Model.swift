@@ -88,17 +88,3 @@ struct AdvertisementResponse: Codable {
     let message: String
     let data: Advertisement
 }
-
-
-func loadJsonData<T: Decodable> (_ fileName: String) -> T {
-    guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {
-        fatalError("Can not find \(fileName) in main bundle")
-    }
-    guard let data = try? Data(contentsOf: url) else {
-        fatalError("Can not load \(url)")
-    }
-    guard let t = try? JSONDecoder().decode(T.self, from: data) else {
-        fatalError("Can not parse json data")
-    }
-    return t
-}
