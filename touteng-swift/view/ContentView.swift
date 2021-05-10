@@ -21,9 +21,7 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 10.0)
             })
 
-            VStack {
-                Text("军事")
-            }
+            PostListView(category: .military).environmentObject(userData)
             .tabItem({
                 Image(systemName: "gear")
                 Text("军事")
@@ -34,12 +32,19 @@ struct ContentView: View {
             }
            
             
-            VStack {
-                Text("设置")
-            }
+            PostListView(category: .entertainment).environmentObject(userData)
             .tabItem({
                 Image(systemName: "gear")
                 Text("娱乐")
+                RoundedRectangle(cornerRadius: 10.0)
+            })
+            
+            
+            PostListView(category:
+                .tech).environmentObject(userData)
+            .tabItem({
+                Image(systemName: "gear")
+                Text("科技")
                 RoundedRectangle(cornerRadius: 10.0)
             })
         }

@@ -39,10 +39,19 @@ struct Article {
     let article_url: String
     let cell_type: Int
     let title: String
-    let author_info: Author
+    let author_info: Author?
     let publish_time: Int?
+    let covers: [CoverImage]?
+}
+
+struct Advertisement {
+    let gid: String
+    let cell_type: Int
+    let title: String
+    let article_url: String
     let covers: [CoverImage]
 }
+
 
 extension Article:Codable, Identifiable, Equatable {
     var id: String {
@@ -58,13 +67,6 @@ extension Article:Codable, Identifiable, Equatable {
     }
 }
 
-struct Advertisement {
-    let gid: String
-    let cell_type: Int
-    let title: String
-    let article_url: String
-    let covers: [CoverImage]
-}
 
 extension Advertisement:Codable, Identifiable {
     var id: String {

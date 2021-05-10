@@ -16,9 +16,6 @@ struct touteng_swiftApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(touteng_swiftApp.userData)
-                .onAppear(perform: {
-                    // DO request
-                })
         }
     }
 }

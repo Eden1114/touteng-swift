@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import BBSwiftUIKit
 
 
@@ -23,19 +24,8 @@ struct PostListView: View {
     @State var category:PostListCategory
     
     var body: some View {
-        let articles = userData.postlists[.all]!
+        let articles = userData.postlists[category]!
         return NavigationView {
-//            List {
-//                ForEach(articles) { article in
-//                    ZStack {
-//                        ArticleView(article: article)
-//                        NavigationLink(destination: FullArticleView(webViewStore: userData.webviewstore, url: article.article_url)
-//                        ) {
-//                            EmptyView()
-//                        }.hidden()
-//                    }
-//                }
-//            }
             BBTableView(articles) { article in
                 NavigationLink(destination:FullArticleView(webViewStore: userData.webviewstore, url: article.article_url)) {
                     ArticleView(article: article)
@@ -43,14 +33,23 @@ struct PostListView: View {
                 .buttonStyle(OriginalButtonStyle())
             }
             .bb_setupRefreshControl { control in
-                control.attributedTitle = NSAttributedString(string: "loading")
+                control.attributedTitle = NSAttributedString(string: "Loading")
             }
             .bb_pullDownToRefresh(isRefreshing: $userData.isRefreshing) {
-                print("refresh")
-                self.userData.loadingError = NSError(domain: "", code: 123, userInfo: [NSLocalizedDescriptionKey:"refreshing error"])
+//                self.userData
+//                print("refresh")
+//                self.userData.loadingError = NSError(domain: "", code: 123, userInfo: [NSLocalizedDescriptionKey:"Refreshing error"])
+//
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                    self.userData.isRefreshing = false
+//                    self.userData.loadingError = nil
+//                }
+                self.userData.handleInteraction( category: category, requestType: .refresh)
+                
             }
             .bb_pullUpToLoadMore(bottomSpace: 30) {
-                if self.userData.isLoadingMore { return }
+                
+                self.userData.handleInteraction(category: category, requestType: .loadingMore)
             }
             .overlay(
                 Text(userData.loadingErrorText)
