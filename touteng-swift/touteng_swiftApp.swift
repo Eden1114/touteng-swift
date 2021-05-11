@@ -9,13 +9,11 @@ import SwiftUI
 
 @main
 struct touteng_swiftApp: App {
-
-    static private var userData:UserData = UserData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(touteng_swiftApp.userData)
+                .environmentObject(UserData())
         }
     }
 }

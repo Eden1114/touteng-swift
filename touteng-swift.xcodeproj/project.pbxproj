@@ -18,17 +18,16 @@
 		F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2377E1926300DBA00F4E674 /* NetworkManager.swift */; };
 		F2453BB526305AA600240C47 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2453BB426305AA600240C47 /* NetworkAPI.swift */; };
 		F252EC552643EE6400969BA2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC542643EE6400969BA2 /* Color.swift */; };
-		F252EC572643EEF600969BA2 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC562643EEF600969BA2 /* testView.swift */; };
 		F252EC5B2643FEFA00969BA2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC5A2643FEFA00969BA2 /* PostListView.swift */; };
 		F252EC5D2646B83400969BA2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252EC5C2646B83400969BA2 /* UserData.swift */; };
-		F252EC6126481BC400969BA2 /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = F252EC6026481BC300969BA2 /* logo120.png */; };
 		F26C3445263150B400A4189D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3444263150B400A4189D /* Model.swift */; };
 		F26C344B2631713B00A4189D /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C344A2631713B00A4189D /* ArticleView.swift */; };
-		F27A52FE263945F200F5952C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A52FD263945F200F5952C /* WebView.swift */; };
 		F27A53022639464B00F5952C /* FullArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A53012639464B00F5952C /* FullArticleView.swift */; };
 		F27A5306263947B500F5952C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A5305263947B500F5952C /* Utils.swift */; };
-		F27C67892637101D007A7E70 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C67882637101D007A7E70 /* ImageLoader.swift */; };
-		F27C678D263710E8007A7E70 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C678C263710E8007A7E70 /* URLImageView.swift */; };
+		F2F671D1264A3D8A00F67630 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */; };
+		F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */; };
+		F2F671D5264A415800F67630 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F671D4264A415800F67630 /* list.json */; };
+		F2F671D7264A416300F67630 /* adinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F671D6264A416300F67630 /* adinfo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,17 +60,16 @@
 		F2377E1926300DBA00F4E674 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F2453BB426305AA600240C47 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		F252EC542643EE6400969BA2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		F252EC562643EEF600969BA2 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		F252EC5A2643FEFA00969BA2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		F252EC5C2646B83400969BA2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		F252EC6026481BC300969BA2 /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
 		F26C3444263150B400A4189D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F26C344A2631713B00A4189D /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
-		F27A52FD263945F200F5952C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		F27A53012639464B00F5952C /* FullArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleView.swift; sourceTree = "<group>"; };
 		F27A5305263947B500F5952C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		F27C67882637101D007A7E70 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		F27C678C263710E8007A7E70 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		F2F671D4264A415800F67630 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		F2F671D6264A416300F67630 /* adinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = adinfo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,41 +112,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F20EEEF22636929B003F8E90 /* lib */ = {
+		F20EEEF22636929B003F8E90 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				F2377E1926300DBA00F4E674 /* NetworkManager.swift */,
 				F2453BB426305AA600240C47 /* NetworkAPI.swift */,
-				F27C67882637101D007A7E70 /* ImageLoader.swift */,
 				F27A5305263947B500F5952C /* Utils.swift */,
 				F252EC542643EE6400969BA2 /* Color.swift */,
 			);
-			path = lib;
+			path = Lib;
 			sourceTree = "<group>";
 		};
-		F20EEEF5263692AD003F8E90 /* dataModel */ = {
+		F20EEEF5263692AD003F8E90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F252EC6026481BC300969BA2 /* logo120.png */,
 				F252EC5C2646B83400969BA2 /* UserData.swift */,
 				F26C3444263150B400A4189D /* Model.swift */,
 			);
-			path = dataModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F20EEEF8263692C3003F8E90 /* view */ = {
+		F20EEEF8263692C3003F8E90 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */,
+				F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */,
 				F2377DF2262D9AEA00F4E674 /* ContentView.swift */,
 				F26C344A2631713B00A4189D /* ArticleView.swift */,
 				F20EEF012636949C003F8E90 /* AuthorView.swift */,
-				F27C678C263710E8007A7E70 /* URLImageView.swift */,
-				F27A52FD263945F200F5952C /* WebView.swift */,
 				F27A53012639464B00F5952C /* FullArticleView.swift */,
-				F252EC562643EEF600969BA2 /* testView.swift */,
 				F252EC5A2643FEFA00969BA2 /* PostListView.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		F2377DE4262D9AEA00F4E674 = {
@@ -174,13 +169,14 @@
 		F2377DEF262D9AEA00F4E674 /* touteng-swift */ = {
 			isa = PBXGroup;
 			children = (
+				F2F671CF264A258800F67630 /* Resources */,
 				F2377DF0262D9AEA00F4E674 /* touteng_swiftApp.swift */,
-				F20EEEF8263692C3003F8E90 /* view */,
+				F20EEEF8263692C3003F8E90 /* View */,
 				F2377DF4262D9AEB00F4E674 /* Assets.xcassets */,
-				F20EEEF22636929B003F8E90 /* lib */,
+				F20EEEF22636929B003F8E90 /* Lib */,
 				F2377DFE262D9AEB00F4E674 /* Info.plist */,
 				F2377DFB262D9AEB00F4E674 /* touteng_swift.xcdatamodeld */,
-				F20EEEF5263692AD003F8E90 /* dataModel */,
+				F20EEEF5263692AD003F8E90 /* Model */,
 			);
 			path = "touteng-swift";
 			sourceTree = "<group>";
@@ -192,6 +188,15 @@
 				F2377E0D262DA48000F4E674 /* Info.plist */,
 			);
 			path = "touteng-swiftTests";
+			sourceTree = "<group>";
+		};
+		F2F671CF264A258800F67630 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2F671D6264A416300F67630 /* adinfo.json */,
+				F2F671D4264A415800F67630 /* list.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F252EC6126481BC400969BA2 /* logo120.png in Resources */,
+				F2F671D7264A416300F67630 /* adinfo.json in Resources */,
 				F2377DF5262D9AEB00F4E674 /* Assets.xcassets in Resources */,
+				F2F671D5264A415800F67630 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,20 +368,18 @@
 			files = (
 				F20EEF022636949C003F8E90 /* AuthorView.swift in Sources */,
 				F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */,
-				F27C67892637101D007A7E70 /* ImageLoader.swift in Sources */,
 				F27A5306263947B500F5952C /* Utils.swift in Sources */,
-				F252EC572643EEF600969BA2 /* testView.swift in Sources */,
 				F26C344B2631713B00A4189D /* ArticleView.swift in Sources */,
 				F2453BB526305AA600240C47 /* NetworkAPI.swift in Sources */,
 				F26C3445263150B400A4189D /* Model.swift in Sources */,
 				F252EC552643EE6400969BA2 /* Color.swift in Sources */,
 				F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */,
+				F2F671D1264A3D8A00F67630 /* HScrollViewController.swift in Sources */,
 				F252EC5B2643FEFA00969BA2 /* PostListView.swift in Sources */,
 				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
-				F27A52FE263945F200F5952C /* WebView.swift in Sources */,
+				F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */,
 				F252EC5D2646B83400969BA2 /* UserData.swift in Sources */,
 				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
-				F27C678D263710E8007A7E70 /* URLImageView.swift in Sources */,
 				F27A53022639464B00F5952C /* FullArticleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

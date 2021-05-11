@@ -6,25 +6,20 @@
 //
 
 import SwiftUI
-//import URLImage
+import SDWebImageSwiftUI
 
 
 struct AuthorView: View {
     @State var author :Author
     var body: some View {
         HStack() {
-            URLImageView(url: author.avatar)
+            WebImage(url: author.avatar_url)
+                .resizable()
                 .frame(width: 10, height: 10)
+                
             Text(author.user_name)
                 .font(.custom("STZhongsong",size: 10))
-//                .foregroundColor(.orange)
-//                .lineLimit(1)
-            
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 12).stroke(Color.red
-//                    ,lineWidth: 2)
-//
-//                )
+                .lineLimit(1)
         }.fixedSize()
     }
 }

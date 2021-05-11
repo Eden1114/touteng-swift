@@ -13,6 +13,12 @@ struct Author: Codable {
     let user_name:String
 }
 
+extension Author {
+    var avatar_url : URL {
+        return URL(string: Utils.http2https(avatar))!
+    }
+}
+
 struct CoverImage {
     let width: Int  // 300
     let height: Int // 196
@@ -44,33 +50,21 @@ struct Article {
     let covers: [CoverImage]?
 }
 
-struct Advertisement {
-    let gid: String
-    let cell_type: Int
-    let title: String
-    let article_url: String
-    let covers: [CoverImage]
-}
-
-
 extension Article:Codable, Identifiable, Equatable {
     var id: String {
         return gid
     }
     
-    func getPublishTimeString() -> String {
-        return Utils.getStringFromTimeStamp(self.publish_time ?? 0)
+    var time:String {
+        if cell_type == 0 {
+            return Utils.getStringFromTimeStamp(self.publish_time ?? 0)
+        } else {
+            return "Advertisement"
+        }
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.gid == rhs.gid
-    }
-}
-
-
-extension Advertisement:Codable, Identifiable {
-    var id: String {
-        return gid
     }
 }
 
@@ -83,8 +77,13 @@ struct ArticleListResponse: Codable {
     let has_more: Bool?
 }
 
+typealias Advertisement = Article
+
 struct AdvertisementResponse: Codable {
     let code: Int
     let message: String
     let data: Advertisement
 }
+
+
+typealias GID = String

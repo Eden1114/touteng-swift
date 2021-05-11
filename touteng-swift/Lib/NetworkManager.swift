@@ -21,20 +21,19 @@ typealias NetworkJSONRequestCompletion = (NetworkJSONRequestResult) -> Void
 class NetworkManager {
     // Singlon Mode
     static let shared = NetworkManager()
-    private init() {}
     
-    var commonHeaders: HTTPHeaders{[]}
+    let session = Session.default
+    private init() {}
     
     @discardableResult
     func requestGet(path: String, parameters: Parameters?, completion: @escaping NetworkRequestCompletion) -> DataRequest {
-        AF.request(NetworkAPIBaseURL + path,
+        debugPrint(parameters ?? "")
+        return session.request(NetworkAPIBaseURL + path,
                    parameters: parameters,
-                   requestModifier: { $0.timeoutInterval = 15 })
+                   requestModifier: { $0.timeoutInterval = 5 })
             .responseData {response in
             switch response.result {
-            case let .success(data):
-//                debugPrint(response)
-                completion(.success(data))
+            case let .success(data): completion(.success(data))
             case let .failure(error): completion(.failure(error))
             }
         }
@@ -43,10 +42,11 @@ class NetworkManager {
     @discardableResult
     func requestPOST(path: String, parameters: Parameters?,
                      completion: @escaping NetworkRequestCompletion) -> DataRequest {
-        AF.request(NetworkAPIBaseURL + path, method: .post,
+        
+        session.request(NetworkAPIBaseURL + path, method: .post,
                    parameters: parameters,
                    encoding: JSONEncoding.prettyPrinted,
-                   requestModifier: { $0.timeoutInterval = 15 })
+                   requestModifier: { $0.timeoutInterval = 5 })
             .responseData {
                 response in
                 switch response.result {
@@ -54,5 +54,5 @@ class NetworkManager {
                 case let .failure(error): completion(.failure(error))
                 }
             }
-    }
+        }
 }

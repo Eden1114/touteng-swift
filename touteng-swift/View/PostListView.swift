@@ -18,8 +18,6 @@ struct OriginalButtonStyle: ButtonStyle {
 
 
 struct PostListView: View {
-    
-    
     @EnvironmentObject var userData: UserData
     @State var category:PostListCategory
     
@@ -27,7 +25,7 @@ struct PostListView: View {
         let articles = userData.postlists[category]!
         return NavigationView {
             BBTableView(articles) { article in
-                NavigationLink(destination:FullArticleView(webViewStore: userData.webviewstore, url: article.article_url)) {
+                NavigationLink(destination:FullArticleView(url: article.article_url)) {
                     ArticleView(article: article)
                 }
                 .buttonStyle(OriginalButtonStyle())
@@ -36,20 +34,14 @@ struct PostListView: View {
                 control.attributedTitle = NSAttributedString(string: "Loading")
             }
             .bb_pullDownToRefresh(isRefreshing: $userData.isRefreshing) {
-//                self.userData
-//                print("refresh")
-//                self.userData.loadingError = NSError(domain: "", code: 123, userInfo: [NSLocalizedDescriptionKey:"Refreshing error"])
-//
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                    self.userData.isRefreshing = false
-//                    self.userData.loadingError = nil
-//                }
-                self.userData.handleInteraction( category: category, requestType: .refresh)
-                
+                self.userData.refresh(forCategory: category)
             }
             .bb_pullUpToLoadMore(bottomSpace: 30) {
-                
-                self.userData.handleInteraction(category: category, requestType: .loadingMore)
+                self.userData.loadMore(forCategory: category)
+            }
+            .bb_reloadData($userData.reloadData)
+            .onAppear {
+                self.userData.loadArticleIfNeeded(forCategory: category)
             }
             .overlay(
                 Text(userData.loadingErrorText)
@@ -67,7 +59,6 @@ struct PostListView: View {
                         .animation(.easeInOut)
             )
             
-            
             .navigationBarTitle(category.rawValue)
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -76,6 +67,6 @@ struct PostListView: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView(category: .all).environmentObject(UserData())
+        PostListView(category: .all).environmentObject(UserData.testData)
     }
 }
