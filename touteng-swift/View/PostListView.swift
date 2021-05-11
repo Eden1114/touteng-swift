@@ -24,8 +24,6 @@ struct PostListView: View {
     var body: some View {
         let articlelist = userData.postlists[category]!
         return VStack {
-
-        
             BBTableView(articlelist) { article in
                 NavigationLink(destination:FullArticleView(url: article.article_url)) {
 //                    if(article) {
@@ -36,7 +34,7 @@ struct PostListView: View {
 //                        }
 //                    }
 //                    else {
-                        ArticleView(article: article)
+                        ArticleView(article: article, category: category)
 //                    }
                 }
                 .buttonStyle(OriginalButtonStyle())

@@ -15,10 +15,10 @@ struct AuthorView: View {
         HStack() {
             WebImage(url: author.avatar_url)
                 .resizable()
-                .frame(width: 10, height: 10)
+                .frame(width: 20, height: 20)
                 
             Text(author.user_name)
-                .font(.custom("STZhongsong",size: 10))
+                .font(.custom("STZhongsong",size: 15))
                 .lineLimit(1)
         }.fixedSize()
     }
