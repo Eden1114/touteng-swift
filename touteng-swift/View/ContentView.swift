@@ -11,52 +11,29 @@ import Foundation
 
 struct ContentView: View {
     @EnvironmentObject var userData:UserData
+    @State var leftPercent: CGFloat = 0
     
     var body: some View {
-//        TabView {
-            PostListView(category: .all)
-//            .tabItem({
-//                Image(systemName: "gear")
-//                Text("全部")
-//                RoundedRectangle(cornerRadius: 10.0)
-//            })
-//
-//            PostListView(category: .military)
-//            .tabItem({
-//                Image(systemName: "gear")
-//                Text("军事")
-//                RoundedRectangle(cornerRadius: 10.0)
-//            })
-//
-//            PostListView(category: .entertainment)
-//            .tabItem({
-//                Image(systemName: "gear")
-//                Text("娱乐")
-//                RoundedRectangle(cornerRadius: 10.0)
-//            })
-//
-//
-//            PostListView(category: .tech)
-//            .tabItem({
-//                Image(systemName: "gear")
-//                Text("科技")
-//                RoundedRectangle(cornerRadius: 10.0)
-//            })
-//        }
+        NavigationView {
+            GeometryReader{ geometry in
+                HScrollViewController(pageWidth: UIScreen.main.bounds.width, contentSize: CGSize(width: UIScreen.main.bounds.width * 4, height: UIScreen.main.bounds.height),leftPercent:self.$leftPercent) {
+                    HStack(spacing:0){
+                        PostListView(category: .all)
+                            .frame(width:UIScreen.main.bounds.width)
+                        PostListView(category: .tech)
+                            .frame(width:UIScreen.main.bounds.width)
+                        PostListView(category: .military)
+                            .frame(width:UIScreen.main.bounds.width)
+                        PostListView(category: .entertainment)
+                            .frame(width:UIScreen.main.bounds.width)
+                    }
+                }
+            }
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent))
+            .navigationBarTitle("明日头疼",displayMode: .inline)
+        }
     }
-    
-    
-//    var test: some View {
-//        NavigationView {
-//            GeometryReader { geometry in
-//                HScrollViewController(pageWidth: geometry.size.width,
-//                                      contentSize: CGSize(width: geometry.size.width * 2,
-//                                                          height: geometry.size.height,
-//                                                          leftPercent: self.$leftPercent)
-//
-//            }
-//        }
-//    }
 }
 
 

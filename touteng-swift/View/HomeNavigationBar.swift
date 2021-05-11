@@ -1,51 +1,39 @@
-
+//
+//  HScrollViewController.swift
+//  touteng-swift
+//
+//  Created by Eden on 2021/5/10.
+//
 
 import SwiftUI
+
 private let kLabelWidth: CGFloat = 60
 private let kButtonHeight: CGFloat = 24
+
 struct HomeNavigationBar: View {
-    @Binding var leftPercent: CGFloat //0 for left, 1，2 3 for right
-    
+    @Binding var leftPercent: CGFloat
   
     var body: some View {
-        HStack(alignment: .top, spacing: 0){
-            
-            Button(action: {
-                print("Camera")
-            }){
-                Image(systemName: "camera")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: kButtonHeight, height: kButtonHeight)
-                    .padding(.horizontal, 15)
-                    .foregroundColor(.black)
-                    .padding(.top, 5)
-                    
-                
-            }
-            //Spacer()
-            
-            VStack(spacing: 3){
+        HStack(alignment: .top, spacing: 0) {
+            VStack(spacing: 3) {
                 HStack(spacing: 0){
                     Text("推荐")
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, 5)
-                        .opacity(Double(whhistouming(left: leftPercent, labelloc: 0)))
+                        .opacity(Double(getOpacity(left: leftPercent, labelloc: 0)))
                         .onTapGesture {
                             withAnimation{
                                 self.leftPercent = 0
                             }
-                            
                         }
-                    
                     Spacer()
                     
                     Text("科技")
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, 5)
-                        .opacity(Double(whhistouming(left: leftPercent, labelloc: 1)))
+                        .opacity(Double(getOpacity(left: leftPercent, labelloc: 1)))
                         .onTapGesture {
                             withAnimation{
                                 self.leftPercent = 1
@@ -57,7 +45,7 @@ struct HomeNavigationBar: View {
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, 5)
-                        .opacity(Double(whhistouming(left: leftPercent, labelloc: 2)))
+                        .opacity(Double(getOpacity(left: leftPercent, labelloc: 2)))
                         .onTapGesture {
                             withAnimation{
                                 self.leftPercent = 2
@@ -69,7 +57,7 @@ struct HomeNavigationBar: View {
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, 5)
-                        .opacity(Double(whhistouming(left: leftPercent, labelloc: 3)))
+                        .opacity(Double(getOpacity(left: leftPercent, labelloc: 3)))
                         .onTapGesture {
                             withAnimation{
                                 self.leftPercent = 3
@@ -82,28 +70,15 @@ struct HomeNavigationBar: View {
                 RoundedRectangle(cornerRadius: 2)
                     .foregroundColor(.orange)
                     .frame(width: 30, height: 4)
-                    .offset(x: whhgetoffset(left: self.leftPercent))
+                    .offset(x: getOffset(left: self.leftPercent))
             }
             .frame(width: UIScreen.main.bounds.width * 0.75)
-            
-            //Spacer()
-            Button(action: {
-                print("Add")
-            }){
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: kButtonHeight, height: kButtonHeight)
-                    .padding(.horizontal, 15)
-                    .foregroundColor(.orange)
-                    .padding(.top, 5)
-            }
         }
         .frame(width: UIScreen.main.bounds.width)
     }
 }
 
-func whhgetoffset (left: CGFloat) -> CGFloat {
+func getOffset(left: CGFloat) -> CGFloat {
     let width_space = (UIScreen.main.bounds.width * 0.75 - 4 * kLabelWidth)/3
     var off: CGFloat
     if left == 0 {
@@ -119,16 +94,13 @@ func whhgetoffset (left: CGFloat) -> CGFloat {
     
 }
 
-func whhistouming (left: CGFloat, labelloc: CGFloat) -> CGFloat {
-    //返回透明度
+func getOpacity(left: CGFloat, labelloc: CGFloat) -> CGFloat {
     if left == labelloc {
         return 1
     } else {
         return 0.5
     }
-    
 }
-
 
 
 struct HomeNavigationBar_Previews: PreviewProvider {

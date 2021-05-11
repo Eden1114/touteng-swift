@@ -28,6 +28,8 @@
 		F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */; };
 		F2F671D5264A415800F67630 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F671D4264A415800F67630 /* list.json */; };
 		F2F671D7264A416300F67630 /* adinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F671D6264A416300F67630 /* adinfo.json */; };
+		F2F671D9264A6BFB00F67630 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D8264A6BFB00F67630 /* BannerView.swift */; };
+		F2F671DB264A841500F67630 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671DA264A841500F67630 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		F2F671D4264A415800F67630 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		F2F671D6264A416300F67630 /* adinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = adinfo.json; sourceTree = "<group>"; };
+		F2F671D8264A6BFB00F67630 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		F2F671DA264A841500F67630 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				F20EEF012636949C003F8E90 /* AuthorView.swift */,
 				F27A53012639464B00F5952C /* FullArticleView.swift */,
 				F252EC5A2643FEFA00969BA2 /* PostListView.swift */,
+				F2F671D8264A6BFB00F67630 /* BannerView.swift */,
+				F2F671DA264A841500F67630 /* Page.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				F27A5306263947B500F5952C /* Utils.swift in Sources */,
 				F26C344B2631713B00A4189D /* ArticleView.swift in Sources */,
 				F2453BB526305AA600240C47 /* NetworkAPI.swift in Sources */,
+				F2F671DB264A841500F67630 /* Page.swift in Sources */,
 				F26C3445263150B400A4189D /* Model.swift in Sources */,
 				F252EC552643EE6400969BA2 /* Color.swift in Sources */,
 				F2377DF3262D9AEA00F4E674 /* ContentView.swift in Sources */,
@@ -379,6 +386,7 @@
 				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
 				F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */,
 				F252EC5D2646B83400969BA2 /* UserData.swift in Sources */,
+				F2F671D9264A6BFB00F67630 /* BannerView.swift in Sources */,
 				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
 				F27A53022639464B00F5952C /* FullArticleView.swift in Sources */,
 			);

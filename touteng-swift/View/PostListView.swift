@@ -22,11 +22,22 @@ struct PostListView: View {
     @State var category:PostListCategory
     
     var body: some View {
-        let articles = userData.postlists[category]!
-        return NavigationView {
-            BBTableView(articles) { article in
+        let articlelist = userData.postlists[category]!
+        return VStack {
+
+        
+            BBTableView(articlelist) { article in
                 NavigationLink(destination:FullArticleView(url: article.article_url)) {
-                    ArticleView(article: article)
+//                    if(article) {
+//                        VStack {
+//                            BannerView(category: category)
+//                            .aspectRatio(3 / 2, contentMode: .fit)
+//                            ArticleView(article: article)
+//                        }
+//                    }
+//                    else {
+                        ArticleView(article: article)
+//                    }
                 }
                 .buttonStyle(OriginalButtonStyle())
             }
@@ -58,10 +69,8 @@ struct PostListView: View {
                     .opacity(userData.showLoadingError ? 1 : 0)
                         .animation(.easeInOut)
             )
-            
-            .navigationBarTitle(category.rawValue)
+            .listRowInsets(EdgeInsets())
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

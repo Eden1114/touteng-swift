@@ -82,10 +82,18 @@ struct ArticleView: View {
                 VStack (alignment:.leading, spacing:8) {
                     HStack(alignment:.center, spacing:3) {
                         ForEach(article.covers ?? []) { cover in
-                            WebImage(url: cover.Url)
-                                .resizable()
-                                .frame(width: 96, height: 63, alignment: .leading)
-                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                            ZStack {
+                                WebImage(url: cover.Url)
+                                    .resizable()
+                                    .frame(width: 96, height: 63, alignment: .leading)
+                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+//                                NavigationLink(
+//                                    destination: SwiftUIWKWebView(url: cover.Url_large),
+//                                    isActive: .constant(true)) {
+//                                    EmptyView()
+//                                }
+//                                .navigationViewStyle(StackNavigationViewStyle())
+                            }
                         }
                     }
                     .frame(alignment:.leading)
