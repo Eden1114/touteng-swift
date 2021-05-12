@@ -9,8 +9,8 @@ import Foundation
 
 
 struct Author: Codable {
-    let avatar:String
-    let user_name:String
+    let avatar:String // can be ""
+    let user_name:String // 
 }
 
 extension Author {
@@ -51,6 +51,7 @@ struct Article {
 }
 
 extension Article:Codable, Identifiable, Equatable {
+    
     var id: String {
         return gid
     }

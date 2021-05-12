@@ -59,8 +59,6 @@ struct HScrollViewController<Content: View>: UIViewControllerRepresentable {
         
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             
-            print(parent.pageWidth)
-            
             var temp: CGFloat
             if scrollView.contentOffset.x < 375 * 0.5 {
                 temp = 0

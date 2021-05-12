@@ -22,33 +22,24 @@ struct PostListView: View {
     @State var category:PostListCategory
     
     var body: some View {
-        let articlelist = userData.postlists[category]!
         return VStack {
-            BBTableView(articlelist) { article in
+            BBTableView(userData.postlists[category]!) { article in
                 NavigationLink(destination:FullArticleView(url: article.article_url)) {
-//                    if(article) {
-//                        VStack {
-//                            BannerView(category: category)
-//                            .aspectRatio(3 / 2, contentMode: .fit)
-//                            ArticleView(article: article)
-//                        }
-//                    }
-//                    else {
-                        ArticleView(article: article, category: category)
-//                    }
+                    ArticleView(article: article, category: category)
                 }
                 .buttonStyle(OriginalButtonStyle())
             }
-            .bb_setupRefreshControl { control in
-                control.attributedTitle = NSAttributedString(string: "Loading")
-            }
+            .bb_reloadData($userData.reloadData)
             .bb_pullDownToRefresh(isRefreshing: $userData.isRefreshing) {
                 self.userData.refresh(forCategory: category)
+            }
+            .bb_setupRefreshControl { control in
+                control.attributedTitle = NSAttributedString(string: "数据搬运中～")
             }
             .bb_pullUpToLoadMore(bottomSpace: 30) {
                 self.userData.loadMore(forCategory: category)
             }
-            .bb_reloadData($userData.reloadData)
+            
             .onAppear {
                 self.userData.loadArticleIfNeeded(forCategory: category)
             }

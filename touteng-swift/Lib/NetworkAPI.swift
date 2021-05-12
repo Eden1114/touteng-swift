@@ -39,10 +39,8 @@ class NetworkAPI {
     private static func parseData<T: Decodable> (_ data: Data) -> Result<T, Error> {
         guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
             let error = NSError(domain: "network api error",code: 201, userInfo: [NSLocalizedDescriptionKey : "Can not parse data"])
-//            let str =  NSString(data:data, encoding: String.Encoding.utf8.rawValue)
             return .failure(error)
         }
-//        let decodedData = try! JSONDecoder().decode(T.self, from: data)
         return .success(decodedData)
     }
 }

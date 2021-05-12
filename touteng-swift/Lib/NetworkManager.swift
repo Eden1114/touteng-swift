@@ -27,8 +27,7 @@ class NetworkManager {
     
     @discardableResult
     func requestGet(path: String, parameters: Parameters?, completion: @escaping NetworkRequestCompletion) -> DataRequest {
-        debugPrint(parameters ?? "")
-        return session.request(NetworkAPIBaseURL + path,
+        session.request(NetworkAPIBaseURL + path,
                    parameters: parameters,
                    requestModifier: { $0.timeoutInterval = 5 })
             .responseData {response in
@@ -42,7 +41,6 @@ class NetworkManager {
     @discardableResult
     func requestPOST(path: String, parameters: Parameters?,
                      completion: @escaping NetworkRequestCompletion) -> DataRequest {
-        
         session.request(NetworkAPIBaseURL + path, method: .post,
                    parameters: parameters,
                    encoding: JSONEncoding.prettyPrinted,

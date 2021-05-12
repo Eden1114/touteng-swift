@@ -16,8 +16,8 @@ enum PostListCategory:String {
 }
 
 enum RequestType:String {
-    case refresh = "1"  // 下拉刷新
-    case loadingMore = "2" // 加载更多
+    case refresh = "1"
+    case loadingMore = "2"
 }
 
 class UserData: ObservableObject {
@@ -33,6 +33,9 @@ class UserData: ObservableObject {
     @Published var isLoadingMore:Bool = false
     @Published var hasMore:Bool = true
     @Published var loadingError: Error?
+    
+    
+    @Published var allposts:[Article] = []
     
     @Published var postlists:[PostListCategory:[Article]] = [
         .all:[],
@@ -58,12 +61,11 @@ extension UserData {
     static let testData: UserData = {
         let data = UserData()
         let list_dir = "list.json"
-//        let adinfo_dir = "adinfo.json"
         let listJson:ArticleListResponse = Utils.loadJsonData(list_dir)
-        data.handleRefresh(articleListResponse: listJson, forCategory: .all)
-        data.handleRefresh(articleListResponse: listJson, forCategory: .military)
-        data.handleRefresh(articleListResponse: listJson, forCategory: .tech)
-        data.handleRefresh(articleListResponse: listJson, forCategory: .entertainment)
+        data.handleRefresh(forCategory: .all, articleListResponse: listJson)
+        data.handleRefresh(forCategory: .military, articleListResponse: listJson)
+        data.handleRefresh(forCategory: .tech, articleListResponse: listJson)
+        data.handleRefresh(forCategory: .entertainment, articleListResponse: listJson)
         return data
     }()
     
@@ -72,15 +74,13 @@ extension UserData {
     var loadingErrorText: String { loadingError?.localizedDescription ?? "" }
     
     func refresh(forCategory: PostListCategory) {
-        if self.isRefreshing { return }
-        
         NetworkAPI.getList(parameters:
                             ["category":forCategory.rawValue,
                              "request_type": RequestType.refresh.rawValue,
                              "response_extra":response_extra[forCategory]!]) {result in
             switch result {
                 case let .success(articleListResponse):
-                    self.handleRefresh(articleListResponse: articleListResponse, forCategory:forCategory)
+                    self.handleRefresh(forCategory:forCategory, articleListResponse: articleListResponse)
                     self.handleExtra(forCategory: forCategory, extra: articleListResponse.extra)
                     self.handleHasMore(forCategory: forCategory, articleListResponse: articleListResponse)
                 case let .failure(error):
@@ -90,7 +90,7 @@ extension UserData {
         }
     }
     
-    private func handleRefresh(articleListResponse:ArticleListResponse, forCategory:PostListCategory) {
+    private func handleRefresh(forCategory:PostListCategory, articleListResponse:ArticleListResponse) {
         var tempList: [Article] = []
         var tempSet = Set<GID>()
         
@@ -98,7 +98,6 @@ extension UserData {
             if tempSet.contains(article.gid) { continue }
             tempSet.insert(article.gid)
             tempList.append(article)
-//            update(article)
         }
         self.postlists[forCategory] = tempList
         self.postlistsSet[forCategory] = tempSet
@@ -108,7 +107,7 @@ extension UserData {
         if self.isLoadingMore {
             return
         } else if !self.hasMore {
-            self.loadingError = NSError(domain: "HasMore",code: 201, userInfo: [NSLocalizedDescriptionKey : "No More Data"])
+            self.loadingError = NSError(domain: "HasMore",code: 201, userInfo: [NSLocalizedDescriptionKey : "真头疼，没得更多新闻了"])
             return
         }
         self.isLoadingMore = true
@@ -116,15 +115,14 @@ extension UserData {
         NetworkAPI.getList(parameters:
                             ["category":forCategory.rawValue,
                              "request_type": RequestType.loadingMore.rawValue,
-                             "response_extra":response_extra[forCategory]!]) {result in
+                             "response_extra":response_extra[forCategory]!]) { result in
             switch result {
                 case let .success(articleListResponse):
-                    self.handleLoadMore(articleListResponse: articleListResponse, forCategory:forCategory)
+                    self.handleLoadMore(forCategory:forCategory, articleListResponse: articleListResponse)
                     self.handleExtra(forCategory: forCategory, extra: articleListResponse.extra)
                     self.handleHasMore(forCategory: forCategory, articleListResponse: articleListResponse)
                 case let .failure(error):
                     self.handleLoadingError(error)
-                    
             }
             self.isLoadingMore = false
         }
@@ -137,23 +135,21 @@ extension UserData {
         }
     }
     
-    private func handleLoadMore(articleListResponse:ArticleListResponse, forCategory:PostListCategory) {
+    private func handleLoadMore(forCategory:PostListCategory, articleListResponse:ArticleListResponse) {
+        var tempList: [Article] = []
+        var tempSet = Set<GID>()
+        
         for article in articleListResponse.data {
-            
-            if self.postlistsSet[forCategory]!.contains(article.gid) {
-                continue
-            } else {
+            if !self.postlistsSet[forCategory]!.contains(article.gid) {
                 self.postlistsSet[forCategory]!.insert(article.gid)
-                debugPrint(self.postlists[forCategory]!.count)
                 self.postlists[forCategory]!.append(article)
-                debugPrint(self.postlists[forCategory]!.count)
             }
         }
     }
     
     func loadArticleIfNeeded(forCategory:PostListCategory)  {
         if self.postlists[forCategory]!.isEmpty {
-            refresh(forCategory: forCategory)
+            self.refresh(forCategory: forCategory)
         }
     }
 

@@ -40,7 +40,7 @@ struct BannerImage: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-            WebImage(url: article.covers![0].Url_large)
+            WebImage(url: article.covers![0].Url)
                 .placeholder {
                     Color.gray
                 }
@@ -56,21 +56,39 @@ struct BannerView: View {
     @EnvironmentObject var userData:UserData
     @State var currentPage = 0
     @State var category:PostListCategory
-    
+
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
-            let pages:[BannerImage] = {
-                var pages:[BannerImage] = []
-                for article in userData.postlists[category] ?? [] {
-                    if pages.count > 3 {
-                        break
-                    }
-                    if article.covers != nil {
-                        pages.append(BannerImage(article: article))
-                    }
+        let pages:[BannerImage] = {
+            var pages:[BannerImage] = []
+            
+            // 4个banner
+            for article in userData.postlists[self.category] ?? [] {
+                if pages.count > 4 {
+                    break
                 }
-                return pages
-            }()
+                if article.cell_type != 1
+                   && article.covers != nil
+                   && article.covers![0].url_large != "" {
+                    pages.append(BannerImage(article: article))
+                }
+            }
+            
+            // 最多1个广告
+            for article in userData.postlists[self.category] ?? [] {
+                if pages.count > 6 {
+                    break
+                }
+                if article.cell_type == 1
+                    && article.covers != nil
+                    && article.covers![0].url_large != "" {
+                    pages.append(BannerImage(article: article))
+                }
+            }
+            
+            return pages
+        }()
+        
+        ZStack(alignment: .bottomTrailing) {
             if pages.count != 0 {
                 PageViewController(pages: pages, currentPage: $currentPage)
                 PageControl(numberOfPages: pages.count, currentPage: $currentPage)
@@ -78,9 +96,8 @@ struct BannerView: View {
                     .padding()
             }
         }
+//        .frame(minHeight: 100)
     }
-
-
 }
 
 struct BannerView_Previews: PreviewProvider {

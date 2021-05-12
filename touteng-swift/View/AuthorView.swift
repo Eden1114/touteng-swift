@@ -10,13 +10,15 @@ import SDWebImageSwiftUI
 
 
 struct AuthorView: View {
-    @State var author :Author
+    var author :Author
+    
     var body: some View {
         HStack() {
-            WebImage(url: author.avatar_url)
-                .resizable()
-                .frame(width: 20, height: 20)
-                
+            if author.avatar != "" {
+                WebImage(url: author.avatar_url)
+                    .resizable()
+                    .frame(width: 20, height: 20)
+            }
             Text(author.user_name)
                 .font(.custom("STZhongsong",size: 15))
                 .lineLimit(1)
