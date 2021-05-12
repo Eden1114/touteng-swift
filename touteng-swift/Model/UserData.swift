@@ -83,11 +83,20 @@ extension UserData {
                     self.handleRefresh(forCategory:forCategory, articleListResponse: articleListResponse)
                     self.handleExtra(forCategory: forCategory, extra: articleListResponse.extra)
                     self.handleHasMore(forCategory: forCategory, articleListResponse: articleListResponse)
+                    self.handleTips(articleListResponse: articleListResponse)
                 case let .failure(error):
                     self.handleLoadingError(error)
             }
             self.isRefreshing = false
         }
+    }
+    
+    private func handleTips(articleListResponse:ArticleListResponse) {
+        guard let tips:String = articleListResponse.tips else {
+            return
+        }
+        let error = NSError(domain: "Tips", code: 201, userInfo: [NSLocalizedDescriptionKey: tips])
+        self.handleLoadingError(error)
     }
     
     private func handleRefresh(forCategory:PostListCategory, articleListResponse:ArticleListResponse) {
@@ -107,7 +116,8 @@ extension UserData {
         if self.isLoadingMore {
             return
         } else if !self.hasMore {
-            self.loadingError = NSError(domain: "HasMore",code: 201, userInfo: [NSLocalizedDescriptionKey : "真头疼，没得更多新闻了"])
+            let error = NSError(domain: "HasMore", code: 201, userInfo: [NSLocalizedDescriptionKey : "真头疼，没得更多新闻了"])
+            self.handleLoadingError(error)
             return
         }
         self.isLoadingMore = true
