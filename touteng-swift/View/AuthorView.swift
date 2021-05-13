@@ -17,11 +17,12 @@ struct AuthorView: View {
             if author.avatar != "" {
                 WebImage(url: author.avatar_url)
                     .resizable()
-                    .frame(width: 20, height: 20)
+                    .frame(width: 12, height: 12)
             }
             Text(author.user_name)
-                .font(.custom("STZhongsong",size: 15))
+                .font(.custom("STZhongsong",size: 12))
                 .lineLimit(1)
+                .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
         }.fixedSize()
     }
 }

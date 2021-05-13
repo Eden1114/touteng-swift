@@ -14,47 +14,137 @@ struct ArticleView: View {
     
     var article:Article
     var category:PostListCategory
+    let scrwidth = UIScreen.main.bounds.width
     
     var body: some View {
-        ZStack {
+        VStack {
             if article.cell_type == 0 {
-                VStack(alignment:.leading, spacing:10) {
-                    // title
-                    Text(article.gid)
-                    Text(article.title)
-                        .font(.system(size: 20))
-                        .padding(.horizontal,5)
+                
+                if (article.covers?.count == 0){
+                    VStack(alignment:.leading, spacing:10) {
+                        // title
+                        Text(article.title)
+                            .font(.system(size: 16))
+                            .frame(alignment:.leading)
+                        //author
+                        HStack(alignment:.bottom) {
+                            if article.author_info != nil {
+                                AuthorView(author: article.author_info!)
+                            }
+                            Text(article.time)
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
+                        }
+                    }
+//                    .padding(.horizontal,5)
                     
-                    HStack(alignment:.center, spacing:3) {
-                        ForEach(article.covers ?? []) { cover in
-                            ZStack {
-                                WebImage(url: cover.Url)
-                                    .resizable()
-                                    .frame(width: 96, height: 63)
-                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                } else if (article.covers?.count == 1){
+                    HStack(alignment:.center){
+                        VStack(alignment:.leading){
+                            // title
+                            Text(article.title)
+                                .font(.system(size: 16))
+                                .frame(alignment:.leading)
+                            //author
+                            HStack(alignment:.bottom) {
+                                if article.author_info != nil {
+                                    AuthorView(author: article.author_info!)
+                                }
+                                Text(article.time)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
                             }
                         }
-                    }
-                    
-                    HStack(alignment:.bottom) {
-                        if article.author_info != nil {
-                            AuthorView(author: article.author_info!)
+                        Spacer()
+                        // covers
+                        ZStack {
+                            WebImage(url: article.covers?[0].Url)
+                                .resizable()
+                                .frame(width: 100, height: 100*196/300)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
                         }
-                        Text(article.time)
-                            .font(.system(size: 13))
                     }
+//                    .padding(.horizontal,5)
+                    
+                }else if (article.covers?.count == 2){
+                    VStack(alignment:.leading, spacing:10) {
+                        // title
+                        Text(article.title)
+                            .font(.system(size: 16))
+                            .frame(alignment:.leading)
+                        // covers
+                        HStack(alignment:.center, spacing:3) {
+                            ForEach(article.covers ?? []) { cover in
+                                ZStack {
+                                    WebImage(url: cover.Url)
+                                        .resizable()
+                                        .frame(width: (scrwidth-13)/2, height: 196*(scrwidth-13)/600)
+                                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                                }
+                            }
+                        }
+                        //author
+                        HStack(alignment:.bottom) {
+                            if article.author_info != nil {
+                                AuthorView(author: article.author_info!)
+                            }
+                            Text(article.time)
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
+                        }
+                    }
+//                    .padding(.horizontal,5)
+
+                }else{
+                    VStack(alignment:.leading, spacing:10) {
+                        // title
+                        Text(article.title)
+                            .font(.system(size: 16))
+                            .frame(alignment:.leading)
+                        // covers
+                        HStack(alignment:.center, spacing:3) {
+                            ForEach(article.covers ?? []) { cover in
+                                ZStack {
+                                    WebImage(url: cover.Url)
+                                        .resizable()
+                                        .frame(width: (scrwidth-16)/3, height: 196*(scrwidth-16)/900)
+                                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                                }
+                            }
+                        }
+                        //author
+                        HStack(alignment:.bottom) {
+                            if article.author_info != nil {
+                                AuthorView(author: article.author_info!)
+                            }
+                            Text(article.time)
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
+                        }
+                    }
+//                    .padding(.horizontal,5)
                 }
             } else {
-                BannerView(category: category).environmentObject(userData)
+                VStack {
+                    BannerView(category: category).environmentObject(userData)
+                }
+//                .padding(.horizontal,5)
             }
+            
+            //rectangle
+            Rectangle()
+                .padding(.horizontal,-5)
+                .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255))
+                .frame(height:10)
         }
+        .padding(.horizontal,5)
     }
 }
 
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        let article:Article = UserData.testData.postlists[.all]![0]
+        let article:Article = UserData.testData.postlists[.all]![1]
         ArticleView(article: article, category: .all).environmentObject(UserData.testData)
     }
 }
