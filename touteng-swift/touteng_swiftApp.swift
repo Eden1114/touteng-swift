@@ -11,8 +11,7 @@ import SwiftUI
 struct touteng_swiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(UserData())
+            EntranceView()
         }
     }
 }

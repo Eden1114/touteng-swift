@@ -79,7 +79,7 @@ struct HomeNavigationBar: View {
 }
 
 func getOffset(left: CGFloat) -> CGFloat {
-    let width_space = (UIScreen.main.bounds.width * 0.75 - 4 * kLabelWidth)/3
+    let width_space = (UIScreen.main.bounds.width * 0.75 - 4 * kLabelWidth) / 3
     var off: CGFloat
     if left == 0 {
         off = UIScreen.main.bounds.width * 0.75 * (-0.5) + kLabelWidth * 0.5

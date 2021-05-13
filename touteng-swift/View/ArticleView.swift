@@ -24,7 +24,7 @@ struct ArticleView: View {
                     VStack(alignment:.leading, spacing:10) {
                         // title
                         Text(article.title)
-                            .font(.system(size: 16))
+                            .font(.system(size: 20))
                             .frame(alignment:.leading)
                         //author
                         HStack(alignment:.bottom) {
@@ -43,7 +43,7 @@ struct ArticleView: View {
                         VStack(alignment:.leading){
                             // title
                             Text(article.title)
-                                .font(.system(size: 16))
+                                .font(.system(size: 20))
                                 .frame(alignment:.leading)
                             //author
                             HStack(alignment:.bottom) {
@@ -70,7 +70,7 @@ struct ArticleView: View {
                     VStack(alignment:.leading, spacing:10) {
                         // title
                         Text(article.title)
-                            .font(.system(size: 16))
+                            .font(.system(size: 20))
                             .frame(alignment:.leading)
                         // covers
                         HStack(alignment:.center, spacing:3) {
@@ -99,7 +99,7 @@ struct ArticleView: View {
                     VStack(alignment:.leading, spacing:10) {
                         // title
                         Text(article.title)
-                            .font(.system(size: 16))
+                            .font(.system(size: 20))
                             .frame(alignment:.leading)
                         // covers
                         HStack(alignment:.center, spacing:3) {
