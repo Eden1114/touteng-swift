@@ -18,6 +18,12 @@ struct ArticleView: View {
     
     var body: some View {
         VStack {
+            //rectangle
+            Rectangle()
+                .padding(.horizontal,-5)
+                .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255))
+                .frame(height:5)
+            
             if article.cell_type == 0 {
                 
                 if (article.covers?.count == 0){
@@ -25,7 +31,7 @@ struct ArticleView: View {
                         // title
                         Text(article.title)
                             .font(.system(size: 20))
-                            .frame(alignment:.leading)
+                            .frame(width:(scrwidth-10),alignment:.leading)
                         //author
                         HStack(alignment:.bottom) {
                             if article.author_info != nil {
@@ -64,6 +70,7 @@ struct ArticleView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                         }
                     }
+                    .frame(width:(scrwidth-10))
 //                    .padding(.horizontal,5)
                     
                 }else if (article.covers?.count == 2){
@@ -71,7 +78,7 @@ struct ArticleView: View {
                         // title
                         Text(article.title)
                             .font(.system(size: 20))
-                            .frame(alignment:.leading)
+                            .frame(width:(scrwidth-10),alignment:.leading)
                         // covers
                         HStack(alignment:.center, spacing:3) {
                             ForEach(article.covers ?? []) { cover in
@@ -93,6 +100,7 @@ struct ArticleView: View {
                                 .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
                         }
                     }
+                    .frame(width:(scrwidth-10))
 //                    .padding(.horizontal,5)
 
                 }else{
@@ -122,6 +130,7 @@ struct ArticleView: View {
                                 .foregroundColor(Color(red: 160/255, green: 160/255, blue: 160/255))
                         }
                     }
+                    .frame(width:(scrwidth-10))
 //                    .padding(.horizontal,5)
                 }
             } else {
@@ -135,7 +144,7 @@ struct ArticleView: View {
             Rectangle()
                 .padding(.horizontal,-5)
                 .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255))
-                .frame(height:10)
+                .frame(height:5)
         }
         .padding(.horizontal,5)
     }

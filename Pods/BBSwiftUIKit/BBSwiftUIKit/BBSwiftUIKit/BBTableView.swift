@@ -154,7 +154,7 @@ private class _BBTableViewController<Data, Content>: UIViewController, UITableVi
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(_BBTableViewHostCell<Content>.self, forCellReuseIdentifier: "cell")
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
