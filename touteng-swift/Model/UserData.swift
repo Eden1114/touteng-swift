@@ -146,9 +146,6 @@ extension UserData {
     }
     
     private func handleLoadMore(forCategory:PostListCategory, articleListResponse:ArticleListResponse) {
-        var tempList: [Article] = []
-        var tempSet = Set<GID>()
-        
         for article in articleListResponse.data {
             if !self.postlistsSet[forCategory]!.contains(article.gid) {
                 self.postlistsSet[forCategory]!.insert(article.gid)

@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct EntranceView: View {
+    @State var showflag1 = true
+    @State var showflag2 = true
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            if showflag1{
+                SplashScreen(showflag1: self.$showflag1)
+            }
+            else if showflag2{
+                LoginView(showflag2: self.$showflag2)
+            }
+            else{
+                ContentView().environmentObject(UserData.testData)
+            }
+        }
     }
 }
 
