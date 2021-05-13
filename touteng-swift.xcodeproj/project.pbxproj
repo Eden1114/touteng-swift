@@ -24,6 +24,10 @@
 		F26C344B2631713B00A4189D /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C344A2631713B00A4189D /* ArticleView.swift */; };
 		F27A53022639464B00F5952C /* FullArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A53012639464B00F5952C /* FullArticleView.swift */; };
 		F27A5306263947B500F5952C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A5305263947B500F5952C /* Utils.swift */; };
+		F2DA62EB264CFFBF00D155A0 /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA62EA264CFFBF00D155A0 /* EntranceView.swift */; };
+		F2DA62ED264CFFC700D155A0 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA62EC264CFFC700D155A0 /* SplashScreen.swift */; };
+		F2DA62EF264CFFCF00D155A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA62EE264CFFCF00D155A0 /* LoginView.swift */; };
+		F2DA62F1264CFFDF00D155A0 /* CarouselFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA62F0264CFFDF00D155A0 /* CarouselFigure.swift */; };
 		F2F671D1264A3D8A00F67630 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */; };
 		F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */; };
 		F2F671D5264A415800F67630 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F671D4264A415800F67630 /* list.json */; };
@@ -68,6 +72,10 @@
 		F26C344A2631713B00A4189D /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		F27A53012639464B00F5952C /* FullArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleView.swift; sourceTree = "<group>"; };
 		F27A5305263947B500F5952C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F2DA62EA264CFFBF00D155A0 /* EntranceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
+		F2DA62EC264CFFC700D155A0 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		F2DA62EE264CFFCF00D155A0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F2DA62F0264CFFDF00D155A0 /* CarouselFigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselFigure.swift; sourceTree = "<group>"; };
 		F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
 		F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		F2F671D4264A415800F67630 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 		F20EEEF8263692C3003F8E90 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F2DA62F0264CFFDF00D155A0 /* CarouselFigure.swift */,
+				F2DA62EE264CFFCF00D155A0 /* LoginView.swift */,
+				F2DA62EC264CFFC700D155A0 /* SplashScreen.swift */,
+				F2DA62EA264CFFBF00D155A0 /* EntranceView.swift */,
 				F2F671D2264A3D8F00F67630 /* HomeNavigationBar.swift */,
 				F2F671D0264A3D8A00F67630 /* HScrollViewController.swift */,
 				F2377DF2262D9AEA00F4E674 /* ContentView.swift */,
@@ -372,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DA62EB264CFFBF00D155A0 /* EntranceView.swift in Sources */,
 				F20EEF022636949C003F8E90 /* AuthorView.swift in Sources */,
 				F2377DFD262D9AEB00F4E674 /* touteng_swift.xcdatamodeld in Sources */,
 				F27A5306263947B500F5952C /* Utils.swift in Sources */,
@@ -386,8 +399,11 @@
 				F2377E1A26300DBA00F4E674 /* NetworkManager.swift in Sources */,
 				F2F671D3264A3D8F00F67630 /* HomeNavigationBar.swift in Sources */,
 				F252EC5D2646B83400969BA2 /* UserData.swift in Sources */,
+				F2DA62ED264CFFC700D155A0 /* SplashScreen.swift in Sources */,
 				F2F671D9264A6BFB00F67630 /* BannerView.swift in Sources */,
 				F2377DF1262D9AEA00F4E674 /* touteng_swiftApp.swift in Sources */,
+				F2DA62EF264CFFCF00D155A0 /* LoginView.swift in Sources */,
+				F2DA62F1264CFFDF00D155A0 /* CarouselFigure.swift in Sources */,
 				F27A53022639464B00F5952C /* FullArticleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
