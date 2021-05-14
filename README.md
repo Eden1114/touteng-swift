@@ -2,7 +2,7 @@
 
 ## Overview
 
-touteng-swift is a light SWiftUI demo for e-commerce class.
+touteng-swift is a light iOS app demo using SwiftUI for e-commerce lecture.
 
 ## Docs
 
@@ -11,7 +11,8 @@ touteng-swift is a light SWiftUI demo for e-commerce class.
 ## Build
 
 ```shell
-git clone http://10.103.14.64:9980/ecommerce/touteng-swift
+git clone http://github.com/eden1114/touteng-swift
 cd touteng-swift
 pod install
+# then run the code using xcode.
 ```
